@@ -1,0 +1,22 @@
+[
+    {
+        "type": "Valid",
+        "data": {
+            "Biller Name": "Test Biller",
+            "Biller Id": "TEST5498",
+            "Category": "cable tv",
+            "TAN Number": "DELM12345L",
+            "GST Number": "36AAACH7409R1Z2",
+            "PIN Code": "751024",
+            "Address": "At-Rajkishor Nagar,Post-Talcher",
+            "First Name": "Ashish",
+            "Last Name": "Kumar",
+            "Mobile Number": "9439208370",
+            "Email ID": "saswajitjena@yopmail.com",
+            "Account Holder Name": "Gudu Pandit",
+            "Bank Name": "Bank of Baroda",
+            "Account Number": "78676464767657",
+            "Bank IFSC": "SBIN0002100"
+        }
+    }
+]

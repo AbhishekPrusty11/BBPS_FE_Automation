@@ -1,0 +1,17 @@
+{
+  "maker": {
+    "Username": "PrustyMaker",
+    "Password": "r1#8xoMld",
+    "Otp": "000000"
+  },
+  "checker": {
+    "Username": "AbhishekMaker",
+    "Password": "Testing@2026",
+    "Otp": "000000"
+  },
+  "biller": {
+    "Username": "TEST7896",
+    "Password": "Testing@2026",
+    "Otp": "000000"
+  }
+}
