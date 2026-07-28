@@ -9,9 +9,9 @@
     "Password": "Testing@2026",
     "Otp": "000000"
   },
-  "biller": {
-    "Username": "TEST7896",
-    "Password": "Testing@2026",
-    "Otp": "000000"
+  "newBiller": {
+    "username": "TEST7896",
+    "password": "Testing@2026",
+    "otp": "000000"
   }
 }

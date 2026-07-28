@@ -1,0 +1,24 @@
+{
+  "basicDetails": {
+    "logoFilePath": "d:\\BBPS_FE_Automation\\Utils\\sample-pan.pdf",
+    "billerName": "Test Biller",
+    "billerLegalName": "Test Biller Legal Entity",
+    "billerCategory": "agent collection",
+    "gstin": "29ABCDE1234F1Z5",
+    "tanNumber": "BLRR12345C",
+    "uaAadhaar": "123456789012",
+    "rocUin": "ROCUIN123456",
+    "bbpsBillerId": "TEST7896",
+    "registeredCountry": "India",
+    "registeredState": "Odisha",
+    "registeredDistrict": "Khordha",
+    "registeredPinCode": "751024",
+    "registeredAddress": "Patia,bbsr",
+    "sameAsCommunication": false,
+    "communicationCountry": "India",
+    "communicationState": "Odisha",
+    "communicationDistrict": "Khordha",
+    "communicationPinCode": "751024",
+    "communicationAddress": "Patia,bbsr"
+  }
+}
