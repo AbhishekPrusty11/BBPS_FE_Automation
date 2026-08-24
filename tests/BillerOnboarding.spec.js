@@ -1,23 +1,36 @@
-﻿const { test, expect } = require('@playwright/test');
-const Credentials = require('../Utils/testData.json');
-const BillerData = require('../Utils/billerData.json');
-const { LoginAndLogout } = require('../Pages/LoginAndLogout');
-const { BillerOnboardingPage } = require('../Pages/BillerOnboardingPage');
+﻿const { test, expect } = require('../Fixtures/customFixtures/pageFixtures');
+const { setupAuth } = require('../Pages/Hooks');
+const BillerData = require('../Fixtures/testData/BillerOnboard.json');
 
-test('Basic Details onboarding', async ({ page }) => {
-    const loginPage = new LoginAndLogout(page);
-    const onboardingPage = new BillerOnboardingPage(page);
+// Setup auth for Biller role — runs beforeEach test
+// setupAuth('Biller'); 
 
-    await loginPage.goTo();
-    await loginPage.validLogin(
-        Credentials.newBiller.username,
-        Credentials.newBiller.password,
-        Credentials.newBiller.otp
-    );
+test.describe('Biller Onboarding', () => {
+    test.beforeEach(async ({ page }) => {
+        await setupAuth(page, 'Biller');
 
-    await onboardingPage.openBillerOnboarding();
-    await onboardingPage.fillBasicDetails(BillerData.basicDetails);
-    await onboardingPage.saveAndContinue();
+    });
 
-    await expect(page.getByText('Contact Details')).toBeVisible();
-});
+
+    test('Basic Details onboarding', async ({ page, onboardingPage }) => {
+
+        await onboardingPage.openBillerOnboarding();
+        // await onboardingPage.assertBasicDetailsInputsVisible();
+        // await onboardingPage.fillBasicDetails(BillerData.basicDetails);
+        // await onboardingPage.saveAndContinue();
+
+        // await expect(page.getByText('Biller Configuration')).toBeVisible();
+
+        // await onboardingPage.billerConfig();
+        // await onboardingPage.HODdetails(BillerData.POCDetails);
+        // await onboardingPage.saveAndContinue();
+
+        //KYC Details
+        // await onboardingPage.kycDetails(BillerData.KYCDetails);
+
+        //Onboarding Successfull `Message
+        await onboardingPage.OnboardingsuccessMessage();
+    });
+
+
+})

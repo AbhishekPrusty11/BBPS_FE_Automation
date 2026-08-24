@@ -2,8 +2,8 @@
     {
         "type": "Valid",
         "data": {
-            "Biller Name": "Test Biller",
-            "Biller Id": "TEST5498",
+            "Biller Name": "Ayush Sharma",
+            "Biller Id": "TEST5445",
             "Category": "cable tv",
             "TAN Number": "DELM12345L",
             "GST Number": "36AAACH7409R1Z2",
@@ -11,8 +11,8 @@
             "Address": "At-Rajkishor Nagar,Post-Talcher",
             "First Name": "Ashish",
             "Last Name": "Kumar",
-            "Mobile Number": "9439208370",
-            "Email ID": "saswajitjena@yopmail.com",
+            "Mobile Number": "9439657370",
+            "Email ID": "testbiller08@yopmail.com",
             "Account Holder Name": "Gudu Pandit",
             "Bank Name": "Bank of Baroda",
             "Account Number": "78676464767657",

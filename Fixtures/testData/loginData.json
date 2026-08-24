@@ -1,0 +1,33 @@
+{
+  "Maker": {
+    "Username": "PrustyMaker",
+    "Password": "r1#8xoMld",
+    "Otp": "000000"
+  },
+  "Maker2": {
+    "Username": "AbhishekMaker",
+    "Password": "Testing@2029",
+    "Otp": "000000"
+  },
+  "Maker3": {
+    "Username": "BISWANATHMAKER",
+    "Password": "Test@2026",
+    "Otp": "000000"
+  },
+
+  "Biller": {
+    "Username": "TEST7896",
+    "Password": "Testing@2026",
+    "Otp": "000000"
+  },
+  "Checker1":{
+    "Username":"AbhishekChecker",
+    "Password":"Testing@2029",
+    "Otp":"000000"
+  },
+  "Checker":{
+    "Username":"BISWANATHCHECKER",
+    "Password":"Test@2028",
+    "Otp":"000000"
+  }
+}

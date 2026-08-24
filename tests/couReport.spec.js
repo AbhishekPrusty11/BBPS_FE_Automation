@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test');
-const Credentials = require('../Utils/testData.json');
-const { LoginAndLogout } = require('../Pages/LoginAndLogout');
+const Credentials = require('../Fixtures/loginData.json');
+const { LoginAndLogout } = require('../Pages/Login');
 const { COUReportPage } = require('../Pages/COUReportPage');
 
 // ─── Search Parameters ────────────────────────────────────────────────────────
