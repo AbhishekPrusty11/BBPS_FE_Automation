@@ -3,7 +3,6 @@ const { getSession, saveSession, removeSession } = require('../Utils/sessionMana
 const envConfig = require('../Config/envConfig');
 
 
-
 function isTokenExpired(token) {
 
     try {
@@ -36,6 +35,7 @@ const dashboardUrls = {
 // AUTHENTICATION
 // ==================================================
 
+
 async function setupAuth(page, role = 'Maker') {
 
     const dashboardUrl = dashboardUrls[role];
@@ -55,8 +55,6 @@ async function setupAuth(page, role = 'Maker') {
     //     throw new Error(`Incomplete credentials configured for role: ${role}`);
 
     // }
-
-
 
     const loginPage = new LoginAndLogout(page);
     const savedSession = getSession(role);
@@ -91,9 +89,6 @@ async function setupAuth(page, role = 'Maker') {
 
             }, savedSession);
 
-            // Force the app to pick up the injected token
-            // await page.goto(dashboardUrl, { waitUntil: 'domcontentloaded' });
-            // or, if the app expects to always land on login first: await page.reload();
 
             try {
 
@@ -117,17 +112,14 @@ async function setupAuth(page, role = 'Maker') {
                 });
 
                 removeSession(role);
-
             }
-
-        }  // Saved session was rejected.
-        // Continue immediately to fresh login.
+        }
     }
-
 
     // ==================================================
     // 2. FRESH LOGIN
     // ==================================================
+
     console.log(`🔐 Starting fresh ${role} login`);
 
     await loginPage.goTo();
@@ -146,6 +138,7 @@ async function setupAuth(page, role = 'Maker') {
     await page.locator('.zoom-animation').waitFor({ state: 'hidden', timeout: 30000 });
 
     await page.waitForURL(url => url.toString().startsWith(dashboardUrl), { timeout: 15000 }
+
     );
 
     // ==================================================
