@@ -17,7 +17,6 @@ cache:
 install_dependencies:
   stage: install
   tags:
-    - common
     - k8-deploy-runner
     
   script:
@@ -33,7 +32,6 @@ install_dependencies:
 run_fe_tests:
   stage: test
   tags:
-    - common
     - k8-deploy-runner
   dependencies:
     - install_dependencies
