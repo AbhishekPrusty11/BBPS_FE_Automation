@@ -17,7 +17,7 @@ cache:
 install_dependencies:
   stage: install
   tags:
-    - k8-deploy-runner
+    - k8-onprem-deploy-runner
     
   script:
     - echo "Installing FE test dependencies..."
@@ -32,7 +32,7 @@ install_dependencies:
 run_fe_tests:
   stage: test
   tags:
-    - k8-deploy-runner
+    - k8-onprem-deploy-runner
   dependencies:
     - install_dependencies
 
