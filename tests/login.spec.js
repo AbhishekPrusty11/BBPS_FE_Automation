@@ -1,21 +1,30 @@
-const Credentials = require('../Fixtures/testData/loginData.json');
 const { test, expect } = require('../Fixtures/customFixtures/pageFixtures');
+const { setupAuth } = require('../Pages/Hooks');
 
+test.describe('Login Tests', () => {
 
-test('Successful Login', async ({ page,loginpage }) => {
+    test('Maker Login', async ({ page }) => {
 
-    // const loginpage = new LoginAndLogout(page);
+        await setupAuth(page, 'Maker');
 
-    const Role = 'Biller';
+        await expect(page).toHaveURL(/\/admin\/dashboard/);
 
-    const user = Credentials[Role];
+    });
 
-    await loginpage.goTo();
+    // test('Biller Login', async ({ page }) => {
 
-    await loginpage.validLogin(user.Username,user.Password,user.Otp);
+    //     await setupAuth(page, 'Biller');
 
-    console.log('Page title:', await page.title());
+    //     await expect(page).toHaveURL(/\/biller\/dashboard/);
 
-    await expect(page.getByText('No transactions in last 4 hours.')).toBeVisible();
+    // });
+
+    // test('Checker Login', async ({ page }) => {
+
+    //     await setupAuth(page, 'Checker');
+
+    //     await expect(page).toHaveURL(/\/admin\/dashboard/);
+
+    // });
 
 });

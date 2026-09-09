@@ -2,7 +2,7 @@ const { test: base, expect } = require('@playwright/test');
 const { LoginAndLogout } = require('../../Pages/LoginAndLogout');
 const { BillerOnboardingPage } = require('../../Pages/BillerOnboardingPage');
 const { CreateBillerPage } = require('../../Pages/CreateBillerPage')
-const{ApproveBillerPage}=require('../../Pages/approveBiller')
+const { ApproveBillerPage } = require('../../Pages/approveBiller')
 
 const test = base.extend({
     LoginLogout: async ({ page }, use) => {
@@ -14,7 +14,7 @@ const test = base.extend({
     createbiller: async ({ page }, use) => {
         await use(new CreateBillerPage(page))
     },
-    approvebiller:async({page},use)=>{
+    approvebiller: async ({ page }, use) => {
         await use(new ApproveBillerPage(page))
     }
 })

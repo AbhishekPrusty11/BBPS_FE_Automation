@@ -13,13 +13,16 @@ module.exports = defineConfig({
   /* Retry on CI only */
   retries: process.env.CI ? 2 : 0,
   /* Opt out of parallel tests on CI. */
-  workers: 1,
+  workers: 2,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
+    // baseURL: 'https://your-app-url.com',
+
+    // storageState: './auth/maker.json',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'retain-on-failure',
@@ -28,7 +31,7 @@ module.exports = defineConfig({
     headless: false,
     viewport: null,
     launchOptions: {
-        args: ['--start-maximized']
+      args: ['--start-maximized']
     }
   },
 

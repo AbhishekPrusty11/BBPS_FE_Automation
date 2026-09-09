@@ -1,4 +1,4 @@
-const Credentials = require('../Fixtures/testData/loginData.json');
+// const Credentials = require('../Fixtures/testData/loginData.json');
 const BillerDetails = require('../Fixtures/testData/CreateBiller.json');
 const { test, expect } = require('../Fixtures/customFixtures/pageFixtures');
 const { setupAuth } = require('../Pages/Hooks')

@@ -36,7 +36,7 @@ const dashboardUrls = {
 // AUTHENTICATION
 // ==================================================
 
-async function setupAuth(page, role = 'Biller') {
+async function setupAuth(page, role = 'Maker') {
 
     const dashboardUrl = dashboardUrls[role];
     const user = envConfig.credentials[role];
@@ -51,6 +51,10 @@ async function setupAuth(page, role = 'Biller') {
 
         }
     }
+    // if (!user || !user.Username || !user.Password || !user.Otp) {
+    //     throw new Error(`Incomplete credentials configured for role: ${role}`);
+
+    // }
 
 
 
@@ -87,29 +91,33 @@ async function setupAuth(page, role = 'Biller') {
 
             }, savedSession);
 
+            // Force the app to pick up the injected token
+            // await page.goto(dashboardUrl, { waitUntil: 'domcontentloaded' });
+            // or, if the app expects to always land on login first: await page.reload();
 
             try {
 
-                await page.waitForURL(url => url.toString().startsWith(dashboardUrl),
-                    {
-                        timeout: 10000
-                    }
-                );
+                await page.goto(dashboardUrl, { waitUntil: 'domcontentloaded', timeout: 15000 });
 
-                console.log(`✓ ${role} session reused`);
-                return;
-            }
+                if (page.url().startsWith(dashboardUrl)) {
 
-            catch (error) {
+                    console.log(`✓ ${role} session reused`);
+                    return;
+                }
 
-                console.log(`⚠ ${role} saved session rejected by application`
-                );
+                throw new Error(`Application redirected to ${page.url()}`);
+
+            } catch (error) {
+
+                console.log(`⚠ ${role} saved session rejected by application`);
 
                 await page.evaluate(() => {
                     sessionStorage.clear();
+
                 });
 
                 removeSession(role);
+
             }
 
         }  // Saved session was rejected.
@@ -120,9 +128,9 @@ async function setupAuth(page, role = 'Biller') {
     // ==================================================
     // 2. FRESH LOGIN
     // ==================================================
+    console.log(`🔐 Starting fresh ${role} login`);
 
     await loginPage.goTo();
-
 
     // Remove any invalid session
 
@@ -131,19 +139,14 @@ async function setupAuth(page, role = 'Biller') {
 
     });
 
+    console.log(`Login page URL: ${page.url()}`);
 
-    await loginPage.validLogin(
-        user.Username,
-        user.Password,
-        user.Otp
-    );
+    await loginPage.validLogin(user.Username, user.Password, user.Otp);
 
-    await page.locator('.zoom-animation').waitFor({ state: 'hidden', timeout: 15000 });
+    await page.locator('.zoom-animation').waitFor({ state: 'hidden', timeout: 30000 });
 
     await page.waitForURL(url => url.toString().startsWith(dashboardUrl), { timeout: 15000 }
     );
-
-
 
     // ==================================================
     // 4. GET SESSION
@@ -169,12 +172,13 @@ async function setupAuth(page, role = 'Biller') {
         throw new Error(`Authentication token not found after ${role} login`);
     }
 
+    const cookies = await page.context().cookies();
 
     // ==================================================
     // 6. SAVE SESSION
     // ==================================================
 
-    saveSession(role, newSession);
+    saveSession(role, newSession, cookies);
 
 
     console.log(`✓ ${role} login successful`);

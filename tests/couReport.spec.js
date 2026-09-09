@@ -1,5 +1,5 @@
 const { test, expect } = require('@playwright/test');
-const Credentials = require('../Fixtures/loginData.json');
+// const Credentials = require('../Fixtures/loginData.json');
 const { LoginAndLogout } = require('../Pages/Login');
 const { COUReportPage } = require('../Pages/COUReportPage');
 
@@ -28,7 +28,7 @@ test.describe('COU Report — Combination Search', () => {
 
 
     // ─── TC_COU_002 ───────────────────────────────────────────────────────────
-    test.only('TC_COU_002 — Perform Combination Search and verify results load', async ({ page }) => {
+    test('TC_COU_002 — Perform Combination Search and verify results load', async ({ page }) => {
 
         // ── Step 1: Instantiate page objects ──────────────────────────────────
         const loginPage = new LoginAndLogout(page);
