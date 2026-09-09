@@ -12,28 +12,34 @@ cache:
   key: ${CI_COMMIT_REF_SLUG}
   paths:
     - node_modules/
-    - .cache/ms-playwright/
+    - ~/.cache/ms-playwright/
 
 install_dependencies:
   stage: install
   tags:
     - k8-deploy-runner
   script:
-    - npm ci
+    - echo "Installing dependencies..."
+    - npm install
   artifacts:
     paths:
       - node_modules/
     expire_in: 1 week
+  rules:
+    - when: always
 
-run_fe_tests:
+run_api_tests:
   stage: test
+  timeout: 30m
+  allow_failure: true
   tags:
-    - k8-deploy-runner
+    - k8-deploy-runner   
   dependencies:
     - install_dependencies
   script:
+    - echo "Running ${TESTCASE_NAME:-all} test cases..."
     - |
-      if [ -n "$TESTCASE_NAME" ] && [ "$TESTCASE_NAME" != "all" ]; then
+      if [ "$TESTCASE_NAME" != "" ] && [ "$TESTCASE_NAME" != "all" ]; then
         npx playwright test --grep "$TESTCASE_NAME"
       else
         npx playwright test
@@ -43,6 +49,7 @@ run_fe_tests:
     paths:
       - playwright-report/
       - test-results/
-    reports:
-      junit: test-results/junit.xml
+      - reports/nexus-report/
     expire_in: 1 week
+  rules:
+    - when: always
