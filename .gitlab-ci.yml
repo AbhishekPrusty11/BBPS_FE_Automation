@@ -49,7 +49,6 @@ run_api_tests:
     paths:
       - playwright-report/
       - test-results/
-      - reports/nexus-report/
     expire_in: 1 week
   rules:
     - when: always
