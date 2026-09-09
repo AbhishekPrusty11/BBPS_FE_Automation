@@ -1,5 +1,5 @@
 default:
-  image: mcr.microsoft.com/playwright:v1.45.0-focal
+  image: http://mcr.microsoft.com/playwright:v1.61.1-jammy
 
 stages:
   - install
