@@ -1,5 +1,5 @@
 default:
-  image: http://mcr.microsoft.com/playwright:v1.61.1-jammy
+  image: mcr.microsoft.com/playwright:v1.61.1-jammy
 
 stages:
   - install
@@ -12,22 +12,18 @@ cache:
   key: ${CI_COMMIT_REF_SLUG}
   paths:
     - node_modules/
-    - ~/.cache/ms-playwright/
+    - .cache/ms-playwright/
 
 install_dependencies:
   stage: install
   tags:
     - k8-onprem-deploy-runner
-    
   script:
-    - echo "Installing FE test dependencies..."
     - npm ci
   artifacts:
     paths:
       - node_modules/
     expire_in: 1 week
-  rules:
-    - when: always
 
 run_fe_tests:
   stage: test
@@ -35,19 +31,13 @@ run_fe_tests:
     - k8-onprem-deploy-runner
   dependencies:
     - install_dependencies
-
   script:
-    - echo "Running ${TESTCASE_NAME:-all} FE test cases..."
-    - echo "Running Playwright UI tests..."
-
-    # Run specific test if TESTCASE_NAME is provided
     - |
-      if [ "$TESTCASE_NAME" != "" ] && [ "$TESTCASE_NAME" != "all" ]; then
+      if [ -n "$TESTCASE_NAME" ] && [ "$TESTCASE_NAME" != "all" ]; then
         npx playwright test --grep "$TESTCASE_NAME"
       else
         npx playwright test
       fi
-
   artifacts:
     when: always
     paths:
@@ -56,6 +46,3 @@ run_fe_tests:
     reports:
       junit: test-results/junit.xml
     expire_in: 1 week
-
-  rules:
-    - when: always
