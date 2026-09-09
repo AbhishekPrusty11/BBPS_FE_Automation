@@ -39,7 +39,6 @@ test.describe('COU Reports', () => {
         await page.locator('#channelType').click();
         await page.getByRole('option', { name: 'ALL' }).click();
 
-        await page.pause()
 
     })
 

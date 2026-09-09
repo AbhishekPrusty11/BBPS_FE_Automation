@@ -15,20 +15,20 @@ test.describe('Biller Onboarding', () => {
     test('Basic Details onboarding', async ({ page, onboardingPage }) => {
 
         await onboardingPage.openBillerOnboarding();
-        // await onboardingPage.assertBasicDetailsInputsVisible();
-        // await onboardingPage.fillBasicDetails(BillerData.basicDetails);
-        // await onboardingPage.saveAndContinue();
+        await onboardingPage.assertBasicDetailsInputsVisible();
+        await onboardingPage.fillBasicDetails(BillerData.basicDetails);
+        await onboardingPage.saveAndContinue();
 
-        // await expect(page.getByText('Biller Configuration')).toBeVisible();
+        await expect(page.getByText('Biller Configuration')).toBeVisible();
 
-        // await onboardingPage.billerConfig();
-        // await onboardingPage.HODdetails(BillerData.POCDetails);
-        // await onboardingPage.saveAndContinue();
+        await onboardingPage.billerConfig();
+        await onboardingPage.HODdetails(BillerData.POCDetails);
+        await onboardingPage.saveAndContinue();
 
-        //KYC Details
-        // await onboardingPage.kycDetails(BillerData.KYCDetails);
+        // KYC Details
+        await onboardingPage.kycDetails(BillerData.KYCDetails);
 
-        //Onboarding Successfull `Message
+        // Onboarding Successfull `Message
         await onboardingPage.OnboardingsuccessMessage();
     });
 

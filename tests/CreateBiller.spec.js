@@ -10,16 +10,16 @@ test.describe('Biller Creation', () => {
         await setupAuth(page, 'Maker')
     })
 
-const scenario = BillerDetails[0];
+    const scenario = BillerDetails[0];
 
-test(`Create Biller - ${scenario.type} Details`, async ({ page, createbiller }) => {
+    test(`Create Biller - ${scenario.type} Details`, async ({ page, createbiller }) => {
 
-    await createbiller.openCreateBiller();
-    await createbiller.fillBillerDetails(scenario.data);
-    await createbiller.createBiller();
-    await createbiller.verifyCreationSuccess();
-    
-});
+        await createbiller.openCreateBiller();
+        await createbiller.fillBillerDetails(scenario.data);
+        await createbiller.createBiller();
+        await createbiller.verifyCreationSuccess();
+
+    });
 
 })
 
