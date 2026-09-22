@@ -10,34 +10,32 @@ test.describe('BOU Reports', () => {
     })
 
 
-    // test('Custom Reports', async ({ page, bouReports }) => {
+    test('Custom Reports', async ({ page, bouReports }) => {
 
-    //     await bouReports.openReportCenter();
-    //     await bouReports.openBOUReport();
-    //     await bouReports.openCustomTab();
-    //     await bouReports.enterCustomDateRange();
-    //     await bouReports.enterBillerUsername("SATYA1234");
-    //     await bouReports.selectBiller();
-    //     await bouReports.selectReportType();
-    //     await bouReports.search();
+        await bouReports.openReportCenter();
+        await bouReports.openBOUReport();
+        await bouReports.openCustomTab();
+        await bouReports.enterCustomDateRange();
+        await bouReports.enterBillerUsername("SATYA1234");
+        await bouReports.selectBiller();
+        await bouReports.selectReportType();
+        await bouReports.search();
+    })
 
+    test('Periodic Reports', async ({ page, bouReports }) => {
 
-    // })
+        // const bouReportsPage = new BOUReportsPage(page);
+        await bouReports.openReportCenter();
+        await bouReports.openBOUReport();
+        await bouReports.openPeriodicTab();
+        await bouReports.selectPeriodicRange();
+        await bouReports.selectReportType();
+        await bouReports.enterBillerUsername("SATYA1234");
+        await bouReports.selectBiller();
+        await bouReports.search();
+        await page.pause();
 
-    // test('Periodic Reports', async ({ page, bouReports }) => {
-
-    //     // const bouReportsPage = new BOUReportsPage(page);
-    //     await bouReports.openReportCenter();
-    //     await bouReports.openBOUReport();
-    //     await bouReports.openPeriodicTab();
-    //     await bouReports.selectPeriodicRange();
-    //     await bouReports.selectReportType();
-    //     await bouReports.enterBillerUsername("SATYA1234");
-    //     await bouReports.selectBiller();
-    //     await bouReports.search();
-    //     await page.pause();
-
-    // })
+    })
 
     test('Combination Search', async ({ page, bouReports }) => {
 

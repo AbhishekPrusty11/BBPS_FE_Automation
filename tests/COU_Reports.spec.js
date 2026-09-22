@@ -4,7 +4,6 @@ const BillerData = require('../Fixtures/testData/BillerOnboard.json');
 
 
 test.describe('COU Reports', () => {
-    // test.describe.configure({ mode: 'parallel' });
     test.beforeEach(async ({ page }) => {
         await setupAuth(page, 'Checker')
     })
@@ -32,7 +31,6 @@ test.describe('COU Reports', () => {
         await couReports.navigateToCOUReports();
 
         await couReports.searchPeriodicReportByMonth('Aug');
-
 
     })
 
