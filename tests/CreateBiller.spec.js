@@ -1,5 +1,5 @@
 const BillerDetails = require('../Fixtures/testData/CreateBiller.json');
-const { test, expect } = require('../Fixtures/customFixtures');
+const { test, expect } = require('../Fixtures/customFixtures/pageFixtures');
 const { setupAuth } = require('../Pages/Hooks')
 
 // Setup auth for Maker role — this spec creates billers (needs Maker privileges)

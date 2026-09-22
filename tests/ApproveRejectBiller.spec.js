@@ -1,4 +1,4 @@
-const { test:base, expect } = require('../Fixtures/customFixtures/pageFixtures');
+const { test, expect } = require('../Fixtures/customFixtures/pageFixtures');
 const { setupAuth } = require('../Pages/Hooks');
 const BillerDetails = require('../Fixtures/testData/CreateBiller.json');
 
