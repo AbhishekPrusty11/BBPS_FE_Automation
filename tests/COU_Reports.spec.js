@@ -4,97 +4,45 @@ const BillerData = require('../Fixtures/testData/BillerOnboard.json');
 
 
 test.describe('COU Reports', () => {
-    test.describe.configure({ mode: 'parallel' });
+    // test.describe.configure({ mode: 'parallel' });
     test.beforeEach(async ({ page }) => {
-        await setupAuth(page, 'Maker')
+        await setupAuth(page, 'Checker')
     })
 
+    test('Custom Reports', async ({ couReports }) => {
 
-    test('Custom Reports', async ({ page }) => {
-        await page.getByRole('button', { name: 'Report Center' }).click();
-        await page.getByText('COU Report').click();
-        await expect(page.getByText('COU Report').first()).toBeVisible();
-        await page.locator('.zoom-animation').waitFor({ state: 'hidden', timeout: 15000 });
-        await expect(page.getByRole('tab', { name: 'Custom' })).toBeVisible();
-        await page.getByRole('tab', { name: 'Custom' }).click();
+        await couReports.openReportCenter();
+        await couReports.openCOUReport();
+        await couReports.openCustomTab();
 
-        // Start Date & End Date
+        await couReports.selectReportType();
+        await couReports.selectChannelType();
+    })
 
-        const today = new Date();
-        const day = String(today.getDate() - 1).padStart(2, '0');
-        const month = String(today.getMonth() + 1).padStart(2, '0');
-        const year = today.getFullYear();
+    test('Periodic Reports with Date', async ({ couReports }) => {
 
-        const yesterdayDate = `${day}/${month}/${year}`;
+        await couReports.navigateToCOUReports();
 
-        const dateInputs = page.getByRole('textbox', { name: 'DD/MM/YYYY' });
+        await couReports.searchPeriodicReportByDate(14);
 
-        await dateInputs.nth(0).fill(yesterdayDate);
-        await dateInputs.nth(1).fill(yesterdayDate);
+    })
 
-        await page.getByRole('combobox', { name: 'Select Type' }).click();
-        await page.getByRole('option', { name: 'BOU Transaction Report' }).click();
-        await page.getByRole('button', { name: 'Search' }).click();
+    test('Periodic Reports with Month', async ({ couReports }) => {
 
-        await page.locator('#channelType').click();
-        await page.getByRole('option', { name: 'ALL' }).click();
+        await couReports.navigateToCOUReports();
+
+        await couReports.searchPeriodicReportByMonth('Aug');
 
 
     })
 
-    // test('Periodic Reports', async ({ page }) => {
+    test('Combination Search', async ({ couReports }) => {
 
-    //     await page.getByRole('button', { name: 'Report Center' }).click();
-    //     await page.getByText('BOU Report').click();
-    //     await expect(page.getByText('BOU Report').first()).toBeVisible();
-    //     await page.locator('.zoom-animation').waitFor({ state: 'hidden', timeout: 15000 });
-    //     await expect(page.getByRole('tab', { name: 'Periodic' })).toBeVisible();
-    //     await page.getByRole('tab', { name: 'Periodic' }).click();
-    //     await page.getByRole('combobox', { name: 'Select Periodic' }).click();
-    //     await page.getByRole('option', { name: 'Last 7 days' }).click();
-    //     await page.getByRole('combobox', { name: 'Select Type' }).click();
-    //     await page.getByRole('option', { name: 'BOU Transaction Report' }).click();
+        await couReports.navigateToCOUReports();
 
-    //     const billerUsername = page.getByRole('combobox', { name: 'Type Biller Username' });
+        await couReports.performCombinationSearch(12, 'Internet Banking (Post-login)', '5646476576', '1234567890');
 
-    //     await billerUsername.fill('SATYA1234');
-    //     await page.getByRole('option', { name: 'SATYA RANJAN SATYA1234 (9861342205)' }).click();
-    //     await page.getByRole('button', { name: 'Search' }).click();
-    //     await page.pause();
-
-    // })
-
-    // test('Combination Search', async ({ page }) => {
-
-    //     await page.getByRole('button', { name: 'Report Center' }).click();
-    //     await page.getByText('BOU Report').click();
-    //     await expect(page.getByText('BOU Report').first()).toBeVisible();
-    //     await page.locator('.zoom-animation').waitFor({ state: 'hidden', timeout: 15000 });
-    //     await expect(page.getByRole('tab', { name: 'Combination Search' })).toBeVisible();
-    //     await page.getByRole('tab', { name: 'Combination Search' }).click();
-
-
-    //     const today = new Date();
-    //     const day = String(today.getDate() - 1).padStart(2, '0');
-    //     const month = String(today.getMonth() + 1).padStart(2, '0');
-    //     const year = today.getFullYear();
-
-    //     const yesterdayDate = `${day}/${month}/${year}`;
-
-    //     const dateInputs = page.getByRole('textbox', { name: 'DD/MM/YYYY' });
-
-    //     await dateInputs.nth(0).fill(yesterdayDate);
-
-    //     await page.getByPlaceholder('Enter Reference ID').fill('5646476576');
-
-    //     const billerUsername = page.getByRole('combobox', { name: 'Type Biller Username' });
-
-    //     await billerUsername.fill('SATYA1234');
-    //     await page.getByRole('option', { name: 'SATYA RANJAN SATYA1234 (9861342205)' }).click();
-    //     await page.getByRole('button', { name: 'Search' }).click();
-    //     await page.pause();
-
-    // })
+    })
 
 
 

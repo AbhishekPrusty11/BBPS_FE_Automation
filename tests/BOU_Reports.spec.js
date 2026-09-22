@@ -3,8 +3,6 @@ const { setupAuth } = require('../Pages/Hooks');
 const BillerData = require('../Fixtures/testData/BillerOnboard.json');
 
 
-// test.describe.configure({ mode: 'parallel' });
-
 test.describe('BOU Reports', () => {
     // test.describe.configure({ mode: 'parallel' });
     test.beforeEach(async ({ page }) => {
@@ -12,95 +10,50 @@ test.describe('BOU Reports', () => {
     })
 
 
+    // test('Custom Reports', async ({ page, bouReports }) => {
 
-    test('Custom Reports', async ({ page }) => {
-        await page.getByRole('button', { name: 'Report Center' }).click();
-        await page.getByText('BOU Report').click();
-        await expect(page.getByText('BOU Report').first()).toBeVisible();
-        await page.locator('.zoom-animation').waitFor({ state: 'hidden', timeout: 15000 });
-        await expect(page.getByRole('tab', { name: 'Custom' })).toBeVisible();
-        await page.getByRole('tab', { name: 'Custom' }).click();
+    //     await bouReports.openReportCenter();
+    //     await bouReports.openBOUReport();
+    //     await bouReports.openCustomTab();
+    //     await bouReports.enterCustomDateRange();
+    //     await bouReports.enterBillerUsername("SATYA1234");
+    //     await bouReports.selectBiller();
+    //     await bouReports.selectReportType();
+    //     await bouReports.search();
 
-        // Start Date & End Date
 
-        const today = new Date();
+    // })
 
-        const day = String(today.getDate() - 1).padStart(2, '0');
-        const month = String(today.getMonth() + 1).padStart(2, '0');
-        const year = today.getFullYear();
+    // test('Periodic Reports', async ({ page, bouReports }) => {
 
-        const yesterdayDate = `${day}/${month}/${year}`;
-
-        const dateInputs = page.getByRole('textbox', { name: 'DD/MM/YYYY' });
-
-        await dateInputs.nth(0).fill(yesterdayDate);
-        await dateInputs.nth(1).fill(yesterdayDate);
-
-        const billerUsername = page.getByRole('combobox', { name: 'Type Biller Username' });
-
-        await billerUsername.fill('SATYA1234');
-        await page.getByRole('option', { name: 'SATYA RANJAN SATYA1234 (9861342205)' }).click();
-        // await page.getByRole('combobox', { name: 'Report Type' }).click();
-        await page.getByRole('combobox', { name: 'Select Type' }).click();
-        await page.getByRole('option', { name: 'BOU Transaction Report' }).click();
-        await page.getByRole('button', { name: 'Search' }).click();
-        await page.pause()
-
-    })
-
-    // test('Periodic Reports', async ({ page }) => {
-
-    //     await page.getByRole('button', { name: 'Report Center' }).click();
-    //     await page.getByText('BOU Report').click();
-    //     await expect(page.getByText('BOU Report').first()).toBeVisible();
-    //     await page.locator('.zoom-animation').waitFor({ state: 'hidden', timeout: 15000 });
-    //     await expect(page.getByRole('tab', { name: 'Periodic' })).toBeVisible();
-    //     await page.getByRole('tab', { name: 'Periodic' }).click();
-    //     await page.getByRole('combobox', { name: 'Select Periodic' }).click();
-    //     await page.getByRole('option', { name: 'Last 7 days' }).click();
-    //     await page.getByRole('combobox', { name: 'Select Type' }).click();
-    //     await page.getByRole('option', { name: 'BOU Transaction Report' }).click();
-
-    //     const billerUsername = page.getByRole('combobox', { name: 'Type Biller Username' });
-
-    //     await billerUsername.fill('SATYA1234');
-    //     await page.getByRole('option', { name: 'SATYA RANJAN SATYA1234 (9861342205)' }).click();
-    //     await page.getByRole('button', { name: 'Search' }).click();
+    //     // const bouReportsPage = new BOUReportsPage(page);
+    //     await bouReports.openReportCenter();
+    //     await bouReports.openBOUReport();
+    //     await bouReports.openPeriodicTab();
+    //     await bouReports.selectPeriodicRange();
+    //     await bouReports.selectReportType();
+    //     await bouReports.enterBillerUsername("SATYA1234");
+    //     await bouReports.selectBiller();
+    //     await bouReports.search();
     //     await page.pause();
 
     // })
 
-    // test('Combination Search', async ({ page }) => {
+    test('Combination Search', async ({ page, bouReports }) => {
 
-    //     await page.getByRole('button', { name: 'Report Center' }).click();
-    //     await page.getByText('BOU Report').click();
-    //     await expect(page.getByText('BOU Report').first()).toBeVisible();
-    //     await page.locator('.zoom-animation').waitFor({ state: 'hidden', timeout: 15000 });
-    //     await expect(page.getByRole('tab', { name: 'Combination Search' })).toBeVisible();
-    //     await page.getByRole('tab', { name: 'Combination Search' }).click();
+        await bouReports.openReportCenter();
+        await bouReports.openBOUReport();
+        await bouReports.openCombinationSearchTab();
+        await bouReports.enterCustomStartDate();
+        await bouReports.enterReferenceId("5646476576");
+        await bouReports.enterBillerUsername("SATYA1234");
+        await bouReports.selectBiller();
+        await bouReports.search();
+        await page.pause();
 
         
-    //     const today = new Date();
-    //     const day = String(today.getDate() - 1).padStart(2, '0');
-    //     const month = String(today.getMonth() + 1).padStart(2, '0');
-    //     const year = today.getFullYear();
 
-    //     const yesterdayDate = `${day}/${month}/${year}`;
-
-    //     const dateInputs = page.getByRole('textbox', { name: 'DD/MM/YYYY' });
-
-    //     await dateInputs.nth(0).fill(yesterdayDate);
-
-    //     await page.getByPlaceholder('Enter Reference ID').fill('5646476576');
-
-    //     const billerUsername = page.getByRole('combobox', { name: 'Type Biller Username' });
-
-    //     await billerUsername.fill('SATYA1234');
-    //     await page.getByRole('option', { name: 'SATYA RANJAN SATYA1234 (9861342205)' }).click();
-    //     await page.getByRole('button', { name: 'Search' }).click();
-    //     await page.pause();
-
-    // })
+    })
 
 
 

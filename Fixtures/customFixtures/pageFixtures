@@ -3,6 +3,8 @@ const { LoginAndLogout } = require('../../Pages/LoginAndLogout');
 const { BillerOnboardingPage } = require('../../Pages/BillerOnboardingPage');
 const { CreateBillerPage } = require('../../Pages/CreateBillerPage')
 const { ApproveBillerPage } = require('../../Pages/approveBiller')
+const { BOUReportsPage } = require('../../Pages/BOUReportsPage')
+const { COUReportsPage } = require('../../Pages/COUReportsPage')
 
 const test = base.extend({
     LoginLogout: async ({ page }, use) => {
@@ -16,6 +18,12 @@ const test = base.extend({
     },
     approvebiller: async ({ page }, use) => {
         await use(new ApproveBillerPage(page))
+    },
+    bouReports: async ({ page }, use) => {
+        await use(new BOUReportsPage(page))
+    },
+    couReports: async ({ page }, use) => {
+        await use(new COUReportsPage(page))
     }
 })
 module.exports = { test, expect };
