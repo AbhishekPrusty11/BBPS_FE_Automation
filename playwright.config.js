@@ -28,7 +28,7 @@ module.exports = defineConfig({
     trace: 'retain-on-failure',
     permissions: ['geolocation'],
     geolocation: { latitude: 20.2961, longitude: 85.8245 },
-    headless: false,
+    headless: true,
     // viewport: null,
     // launchOptions: {
     //   args: ['--start-maximized']
