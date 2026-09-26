@@ -1,0 +1,34 @@
+{
+  "basicDetails": {
+    "logoFilePath": "./billerOnboardData/sample-pan.pdf",
+    "billerName": "Dummy Biller",
+    "billerLegalName": "Dummy Biller Legal Entity",
+    "billerCategory": "agent collection",
+    "gstin": "29ABCDE1234F1Z5",
+    "tanNumber": "BLRR12345C",
+    "uaAadhaar": "987654321098",
+    "rocUin": "ROCUIN123456",
+    "bbpsBillerId": "DUMMY7896",
+    "registeredCountry": "India",
+    "registeredState": "ODISHA",
+    "registeredDistrict": "KHORDHA",
+    "registeredPinCode": "751024",
+    "registeredAddress": "Patia, Bhubaneswar",
+    "sameAsCommunication": false,
+    "communicationCountry": "India",
+    "communicationState": "ODISHA",
+    "communicationDistrict": "KHORDHA",
+    "communicationPinCode": "751024",
+    "communicationAddress": "Patia, Bhubaneswar"
+  },
+  "POCDetails": {
+    "hodName": "Test POC",
+    "pocEmail": "testpoc@yopmail.com",
+    "pocMobile": "9876543210"
+  },
+  "KYCDetails": {
+    "kycDocName": "Sample KYC Document",
+    "kycFilePath": "./billerOnboardData/sample-pan.pdf",
+    "NAME":""
+  }
+}

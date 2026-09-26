@@ -1,0 +1,29 @@
+const { test: base, expect } = require('@playwright/test');
+const { LoginAndLogout } = require('../../Pages/LoginAndLogout');
+const { BillerOnboardingPage } = require('../../Pages/BillerOnboardingPage');
+const { CreateBillerPage } = require('../../Pages/CreateBillerPage')
+const { ApproveBillerPage } = require('../../Pages/approveBiller')
+const { BOUReportsPage } = require('../../Pages/BOUReportsPage')
+const { COUReportsPage } = require('../../Pages/COUReportsPage')
+
+const test = base.extend({
+    LoginLogout: async ({ page }, use) => {
+        await use(new LoginAndLogout(page))
+    },
+    onboardingPage: async ({ page }, use) => {
+        await use(new BillerOnboardingPage(page))
+    },
+    createbiller: async ({ page }, use) => {
+        await use(new CreateBillerPage(page))
+    },
+    approvebiller: async ({ page }, use) => {
+        await use(new ApproveBillerPage(page))
+    },
+    bouReports: async ({ page }, use) => {
+        await use(new BOUReportsPage(page))
+    },
+    couReports: async ({ page }, use) => {
+        await use(new COUReportsPage(page))
+    }
+})
+module.exports = { test, expect };
