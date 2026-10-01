@@ -15,7 +15,7 @@ test.describe('Biller Creation', () => {
         await reconciliation.couFileUpload();
         await page.pause();
     })
-    test.only('COU Reconciliation History', async ({ reconciliation }) => {
+    test('COU Reconciliation History', async ({ reconciliation }) => {
 
         await reconciliation.openCOUReconciliationMenu();
         await reconciliation.historyBtnClick();

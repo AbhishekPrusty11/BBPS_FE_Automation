@@ -20,7 +20,7 @@ test.describe('Biller Creation', () => {
         await reconciliation.clkonReconcileBtn();
         
     })
-    test.only('Reconciliation History', async ({ page, reconciliation }) => {
+    test('Reconciliation History', async ({ page, reconciliation }) => {
         await reconciliation.openReconciliationMenu();
         await reconciliation.historyBtnClick();
       
