@@ -58,10 +58,6 @@ async function setupAuth(page, role = 'Maker') {
 
         }
     }
-    // if (!user || !user.Username || !user.Password || !user.Otp) {
-    //     throw new Error(`Incomplete credentials configured for role: ${role}`);
-
-    // }
 
     const loginPage = new LoginAndLogout(page);
     const savedSession = getSession(role);
@@ -73,15 +69,15 @@ async function setupAuth(page, role = 'Maker') {
 
     if (savedSession?.token) {
 
-        console.log(`✓ Saved ${role} session found`);
+        console.log(`Saved ${role} session found`);
         if (isTokenExpired(savedSession.token)) {
 
-            console.log(`⚠ ${role} saved session has expired`);
+            console.log(`${role} saved session has expired`);
 
             removeSession(role);
         }
         else {
-            console.log(`✓ ${role} saved token is not expired`);
+            console.log(`${role} saved token is not expired`);
 
             await loginPage.goTo();
             console.log('URL after goTo:', page.url());
@@ -111,7 +107,7 @@ async function setupAuth(page, role = 'Maker') {
 
             } catch (error) {
 
-                console.log(`⚠ ${role} saved session rejected by application`);
+                console.log(`${role} saved session rejected by application`);
 
                 await page.evaluate(() => {
                     sessionStorage.clear();
@@ -127,7 +123,7 @@ async function setupAuth(page, role = 'Maker') {
     // 2. FRESH LOGIN
     // ==================================================
 
-    console.log(`🔐 Starting fresh ${role} login`);
+    console.log(`Starting fresh ${role} login`);
 
     await loginPage.goTo();
 
@@ -180,7 +176,7 @@ async function setupAuth(page, role = 'Maker') {
     saveSession(role, newSession, cookies);
 
 
-    console.log(`✓ ${role} login successful`);
+    console.log(`${role} login successful`);
 }
 
 
