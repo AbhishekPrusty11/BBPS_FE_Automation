@@ -5,6 +5,9 @@ const { CreateBillerPage } = require('../../Pages/CreateBillerPage')
 const { ApproveBillerPage } = require('../../Pages/approveBiller')
 const { BOUReportsPage } = require('../../Pages/BOUReportsPage')
 const { COUReportsPage } = require('../../Pages/COUReportsPage')
+const {billerListPage}=require('../../Pages/billerListPage')
+const {ReconciliationPage}=require('../../Pages/ReconciliationPage')
+
 
 const test = base.extend({
     LoginLogout: async ({ page }, use) => {
@@ -24,6 +27,12 @@ const test = base.extend({
     },
     couReports: async ({ page }, use) => {
         await use(new COUReportsPage(page))
+    },
+    billerlist:async({page},use)=>{
+        await use(new billerListPage(page))
+    },
+    reconciliation:async({page},use)=>{
+        await use(new ReconciliationPage(page))
     }
 })
 module.exports = { test, expect };

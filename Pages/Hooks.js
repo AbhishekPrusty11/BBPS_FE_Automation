@@ -26,9 +26,16 @@ function isTokenExpired(token) {
 // ==================================================
 
 const dashboardUrls = {
+
+    //Staging URLs
     Maker: 'https://bob-bbps-admin-stage.iserveu.online/admin/dashboard',
     Biller: 'https://bob-bbps-admin-stage.iserveu.online/biller/dashboard',
-    Checker: 'https://bob-bbps-admin-stage.iserveu.online/admin/dashboard'
+    Checker: 'https://bob-bbps-admin-stage.iserveu.online/admin/dashboard',
+
+    //UAT URLs
+    // Maker: 'https://bob-bank-uat.isampurna.com/admin/dashboard',
+    // Biller: 'https://bob-bank-uat.isampurna.com/biller/dashboard',
+    // Checker: 'https://bob-bank-uat.isampurna.com/admin/dashboard'
 };
 
 // ==================================================
@@ -126,9 +133,8 @@ async function setupAuth(page, role = 'Maker') {
 
     // Remove any invalid session
 
-    await page.evaluate(() => {
-        sessionStorage.clear();
-
+    await page.evaluate(() => {sessionStorage.clear();
+        
     });
 
     console.log(`Login page URL: ${page.url()}`);

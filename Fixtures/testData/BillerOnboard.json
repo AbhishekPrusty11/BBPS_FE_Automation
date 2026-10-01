@@ -30,5 +30,8 @@
     "kycDocName": "Sample KYC Document",
     "kycFilePath": "./billerOnboardData/sample-pan.pdf",
     "NAME":""
+  },
+  "ReconcileData": {
+    "filePath": "./billerOnboardData/sample-reconciliation-file.zip"
   }
 }

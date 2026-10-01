@@ -38,6 +38,7 @@ class LoginAndLogout {
     async goTo() {
 
         await this.page.goto('https://bob-bbps-admin-stage.iserveu.online/client/login',
+        // await this.page.goto('https://bob-bank-uat.isampurna.com/admin/login',
             {
                 waitUntil: 'domcontentloaded'
             }

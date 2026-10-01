@@ -1,0 +1,243 @@
+## TC_001: To Check Report Center Section is available in Bank Admin Portal
+
+**Pre-condition**: User should have a valid URL and should be logged in as Maker on the Bank Admin Portal
+
+- **Step-by-Step Instructions**:
+  1. Login to the Maker Portal using valid credentials
+  2. Verify that the Report Center section is available in the left navigation menu
+- **Verification Criteria**: Report Center section should be available and clickable in the left navigation menu of the Bank Admin Portal
+
+**Test Data**:
+Valid URL should be available and Username :- BISWANATHMAKER , Password :- Test@2027 should be available
+
+## TC_002: To Verify Navigation to BOU Report Screen from Report Center
+
+**Pre-condition**: User should be logged in as Maker and Report Center section should be visible
+
+- **Step-by-Step Instructions**:
+  1. Click on the Report Center menu in the left navigation
+  2. Click on the BOU Report sub-menu option
+- **Verification Criteria**: The user should be navigated to the BOU Report screen and the breadcrumb should display "Report Center / BOU Report" with the page heading displayed as "BOU Report"
+
+**Test Data**:
+Valid URL should be available and Username :- BISWANATHMAKER , Password :- Test@2027 should be available
+
+## TC_003: To Verify Navigation to COU Report Screen from Report Center
+
+**Pre-condition**: User should be logged in as Maker and Report Center section should be visible
+
+- **Step-by-Step Instructions**:
+  1. Click on the Report Center menu in the left navigation
+  2. Click on the COU Report sub-menu option
+- **Verification Criteria**: The user should be navigated to the COU Report screen and the breadcrumb should display "Report Center / COU Report" with the page heading displayed as "COU Report"
+
+**Test Data**:
+Valid URL should be available and Username :- BISWANATHMAKER , Password :- Test@2027 should be available
+
+## TC_004: To Verify Three Tabs are Displayed on the BOU Report Screen
+
+**Pre-condition**: User should be on the BOU Report screen
+
+- **Step-by-Step Instructions**:
+  1. Observe the tab options displayed below the page heading
+- **Verification Criteria**: Three tabs should be displayed namely Periodic, Custom, and Combination Search, with Periodic selected as the default active tab
+
+**Test Data**: Not applicable
+
+## TC_005: To Verify Navigation to Custom Tab on BOU Report Screen
+
+**Pre-condition**: User should be on the BOU Report screen with the Periodic tab active by default
+
+- **Step-by-Step Instructions**:
+  1. Click on the Custom tab
+- **Verification Criteria**: The Custom tab should become active and the screen should display filter fields relevant to custom search, including a date range selector, Report Type dropdown, and Biller field
+
+**Test Data**: Not applicable
+
+## TC_006: To Verify Custom Tab Displays T-1 Date Range Field
+
+**Pre-condition**: User should be on the BOU Report screen with the Custom tab selected
+
+- **Step-by-Step Instructions**:
+  1. Click on the date range field on the Custom tab
+  2. Observe the calendar picker that appears
+- **Verification Criteria**: A calendar picker should be displayed allowing selection of both From date and To date, and the maximum selectable date should be T-1, that is, one day prior to the current date
+
+**Test Data**: Not applicable
+
+## TC_007: To Verify Selection of Valid T-1 From Date and To Date on Custom Tab
+
+**Pre-condition**: User should be on the BOU Report screen with the Custom tab selected
+
+- **Step-by-Step Instructions**:
+  1. Click on the date range field
+  2. Select a valid From date equal to T-1
+  3. Select a valid To date equal to T-1 or a date prior to T-1
+- **Verification Criteria**: The selected From date and To date should be populated correctly in the date range field without any validation error being displayed
+
+**Test Data**:
+From Date :- Current Date minus 1 day , To Date :- Current Date minus 1 day
+
+## TC_008: To Verify System Restricts Selection of Current Date or Future Date in Custom Tab Date Range
+
+**Pre-condition**: User should be on the BOU Report screen with the Custom tab selected
+
+- **Step-by-Step Instructions**:
+  1. Click on the date range field
+  2. Attempt to select the current date or any future date
+- **Verification Criteria**: The current date and all future dates should be disabled or non-selectable in the calendar picker, and the user should not be able to proceed with such a selection
+
+**Test Data**:
+From Date :- Current Date , To Date :- Current Date plus 1 day
+
+## TC_009: To Verify Validation Message When To Date is Selected Prior to From Date
+
+**Pre-condition**: User should be on the BOU Report screen with the Custom tab selected
+
+- **Step-by-Step Instructions**:
+  1. Click on the date range field
+  2. Select a From date
+  3. Attempt to select a To date that is earlier than the selected From date
+- **Verification Criteria**: The system should either prevent selection of an invalid To date or should display a validation message stating that the To date cannot be earlier than the From date
+
+**Test Data**:
+From Date :- Current Date minus 1 day , To Date :- Current Date minus 5 days
+
+## TC_010: To Verify Report Type Dropdown is Displayed with Valid Options
+
+**Pre-condition**: User should be on the BOU Report screen with the Custom tab selected
+
+- **Step-by-Step Instructions**:
+  1. Click on the Report Type dropdown labelled "Select Type"
+- **Verification Criteria**: The dropdown should open and display the list of valid report type options applicable to BOU Report
+
+**Test Data**: Not applicable
+
+## TC_011: To Verify Selection of a Valid Report Type
+
+**Pre-condition**: User should be on the BOU Report screen with the Custom tab selected and the date range already populated
+
+- **Step-by-Step Instructions**:
+  1. Click on the Report Type dropdown
+  2. Select a valid report type from the list
+- **Verification Criteria**: The selected report type should be displayed in the Report Type field and the dropdown should close
+
+**Test Data**:
+Report Type :- Any valid report type available in the dropdown list
+
+## TC_012: To Verify Biller Field Accepts a Valid Biller Username
+
+**Pre-condition**: User should be on the BOU Report screen with the Custom tab selected
+
+- **Step-by-Step Instructions**:
+  1. Click on the Biller input field labelled "Type Biller Username"
+  2. Enter a valid and existing biller username
+- **Verification Criteria**: The entered biller username should be accepted in the field, and if a suggestion or autocomplete list is available, matching biller names should be displayed
+
+**Test Data**:
+Biller Username :- A valid existing biller username configured in the system
+
+## TC_013: To Verify Biller Field is Optional and Search Can Proceed Without Entering Biller Name
+
+**Pre-condition**: User should be on the BOU Report screen with the Custom tab selected, with valid date range and report type already selected
+
+- **Step-by-Step Instructions**:
+  1. Leave the Biller field blank
+  2. Click on the Search button
+- **Verification Criteria**: The system should allow the search to proceed without a biller name being entered, provided the date range and report type are valid, and results should be fetched for all billers
+
+**Test Data**:
+From Date :- Current Date minus 1 day , To Date :- Current Date minus 1 day , Report Type :- Any valid report type , Biller Username :- Left blank
+
+## TC_014: To Verify Successful Search Submission with All Valid Mandatory Fields
+
+**Pre-condition**: User should be on the BOU Report screen with the Custom tab selected
+
+- **Step-by-Step Instructions**:
+  1. Select a valid From date equal to T-1
+  2. Select a valid To date equal to T-1
+  3. Select a valid Report Type from the dropdown
+  4. Enter a valid Biller Username
+  5. Click on the Search button
+- **Verification Criteria**: The system should process the search request and display the corresponding BOU Report data matching the selected date range, report type, and biller in a tabular format below the filter section
+
+**Test Data**:
+From Date :- Current Date minus 1 day , To Date :- Current Date minus 1 day , Report Type :- Any valid report type , Biller Username :- Any valid existing biller username
+
+## TC_015: To Verify Validation Message When Search is Clicked Without Selecting Mandatory Date Range
+
+**Pre-condition**: User should be on the BOU Report screen with the Custom tab selected
+
+- **Step-by-Step Instructions**:
+  1. Leave the date range field blank
+  2. Select a valid Report Type
+  3. Click on the Search button
+- **Verification Criteria**: The system should display a validation error message indicating that the date range is mandatory, and the search request should not be submitted
+
+**Test Data**:
+From Date :- Left blank , To Date :- Left blank , Report Type :- Any valid report type
+
+## TC_016: To Verify Validation Message When Search is Clicked Without Selecting Mandatory Report Type
+
+**Pre-condition**: User should be on the BOU Report screen with the Custom tab selected
+
+- **Step-by-Step Instructions**:
+  1. Select a valid date range
+  2. Leave the Report Type dropdown as "Select Type"
+  3. Click on the Search button
+- **Verification Criteria**: The system should display a validation error message indicating that the Report Type is mandatory, and the search request should not be submitted
+
+**Test Data**:
+From Date :- Current Date minus 1 day , To Date :- Current Date minus 1 day , Report Type :- Left as default "Select Type"
+
+## TC_017: To Verify System Behaviour When No Data is Found for the Selected Search Criteria
+
+**Pre-condition**: User should be on the BOU Report screen with the Custom tab selected
+
+- **Step-by-Step Instructions**:
+  1. Select a valid date range for which no report data exists
+  2. Select a valid Report Type
+  3. Enter a valid Biller Username
+  4. Click on the Search button
+- **Verification Criteria**: The system should display the "No Data Found" message along with the associated illustration, and no report rows should be displayed in the results table
+
+**Test Data**:
+From Date :- Any valid T-1 date with no report data , To Date :- Same date or a later valid date , Report Type :- Any valid report type , Biller Username :- Any valid existing biller username
+
+## TC_018: To Verify Validation Message on Entering an Invalid or Non-Existent Biller Username
+
+**Pre-condition**: User should be on the BOU Report screen with the Custom tab selected
+
+- **Step-by-Step Instructions**:
+  1. Select a valid date range and Report Type
+  2. Enter a biller username that does not exist in the system
+  3. Click on the Search button
+- **Verification Criteria**: The system should either display "No Data Found" or an appropriate validation message indicating that the biller does not exist, without throwing an application error
+
+**Test Data**:
+From Date :- Current Date minus 1 day , To Date :- Current Date minus 1 day , Report Type :- Any valid report type , Biller Username :- Invalid biller name such as "test_invalid_biller_999"
+
+## TC_019: To Verify Search Bar Below Filter Section Filters the Displayed Report Results
+
+**Pre-condition**: User should have successfully performed a search on the Custom tab and report results should be displayed in the table
+
+- **Step-by-Step Instructions**:
+  1. Click on the "Search Here" search bar located below the filter section
+  2. Enter a keyword corresponding to a value present in the displayed report results
+- **Verification Criteria**: The displayed report results should be filtered dynamically to show only the rows matching the entered keyword
+
+**Test Data**:
+Search Keyword :- Any valid value present in the currently displayed report result, such as a biller name or transaction reference number
+
+## TC_020: To Verify Behaviour When an Excessively Long Date Range is Selected on the Custom Tab
+
+**Pre-condition**: User should be on the BOU Report screen with the Custom tab selected
+
+- **Step-by-Step Instructions**:
+  1. Select a From date that is significantly earlier than the To date, exceeding the maximum permitted range, for example a range of more than ninety days
+  2. Select a valid Report Type
+  3. Click on the Search button
+- **Verification Criteria**: The system should either restrict the date range selection to the maximum permitted range or display a validation message indicating that the selected range exceeds the maximum allowed duration
+
+**Test Data**:
+From Date :- Current Date minus 120 days , To Date :- Current Date minus 1 day , Report Type :- Any valid report type'

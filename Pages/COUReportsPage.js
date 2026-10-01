@@ -31,16 +31,12 @@ class COUReportsPage {
         // Report type
         this.reportType = page.locator('#reportType');
 
-        this.couTransactionReport = page.getByRole('option', {
-            name: 'COU Transaction Report'
-        });
+        this.couTransactionReport = page.getByRole('option', {name: 'COU Transaction Report'});
 
         // Channel type
         this.channelType = page.locator('#channelType');
 
-        this.allChannel = page.getByRole('option', {
-            name: 'ALL'
-        });
+        this.allChannel = page.getByRole('option', {name: 'ALL'});
 
         // Combination Search
         this.combinationDatePicker = page.locator('input[name="date"]').locator('..').getByRole('button');
@@ -139,8 +135,7 @@ class COUReportsPage {
 
 
     async selectMonth(month) {
-        await this.page
-            .getByRole('radio', { name: month })
+        await this.page.getByRole('radio', { name: month })
             .click();
     }
 
@@ -160,18 +155,14 @@ class COUReportsPage {
 
 
     async selectCombinationDate(date) {
-        await this.page
-            .getByRole('gridcell', { name: date.toString() })
-            .click();
+        await this.page.getByRole('gridcell', { name: date.toString() }).click();
     }
 
 
     async selectChannel(channelName) {
         await this.channelId.click();
 
-        await this.page
-            .getByRole('option', { name: channelName })
-            .click();
+        await this.page.getByRole('option', { name: channelName }).click();
     }
 
 

@@ -7,9 +7,7 @@ class BOUReportsPage {
         this.page = page
 
         // Navigation
-        this.reportCenterButton = page.getByRole("button", {
-            name: "Report Center"
-        });
+        this.reportCenterButton = page.getByRole("button", {name: "Report Center"});
 
         this.bouReport = page.getByText("BOU Report").first();
 
@@ -17,14 +15,14 @@ class BOUReportsPage {
         this.loadingAnimation = page.locator(".zoom-animation");
 
         // Tabs
-        this.customTab = page.getByRole("tab", {name: "Custom"});
+        this.customTab = page.getByRole("tab", { name: "Custom" });
 
-        this.periodicTab = page.getByRole("tab", {name: "Periodic"});
+        this.periodicTab = page.getByRole("tab", { name: "Periodic" });
 
-        this.combinationSearchTab = page.getByRole("tab", {name: "Combination Search"});
+        this.combinationSearchTab = page.getByRole("tab", { name: "Combination Search" });
 
         // Date fields
-        this.dateInputs = page.getByRole("textbox", {name: "DD/MM/YYYY"});
+        this.dateInputs = page.getByRole("textbox", { name: "DD/MM/YYYY" });
 
         // Biller
         this.billerUsername = page.getByRole("combobox", {
@@ -59,7 +57,7 @@ class BOUReportsPage {
         );
 
         // Search
-        this.searchButton = page.getByRole("button", {name: "Search"});
+        this.searchButton = page.getByRole("button", { name: "Search" });
     }
 
     async openReportCenter() {
@@ -71,10 +69,7 @@ class BOUReportsPage {
 
         await expect(this.bouReport).toBeVisible();
 
-        await this.loadingAnimation.waitFor({
-            state: "hidden",
-            timeout: 15000
-        });
+        await this.loadingAnimation.waitFor({state: "hidden",timeout: 15000});
     }
 
     async openCustomTab() {
@@ -98,20 +93,18 @@ class BOUReportsPage {
         const day = String(today.getDate() - 1).padStart(2, "0");
         const month = String(today.getMonth() + 1).padStart(2, "0");
         const year = today.getFullYear();
-
+        
         return `${day}/${month}/${year}`;
     }
 
     async enterCustomDateRange() {
         const yesterdayDate = await this.getYesterdayDate();
-
         await this.dateInputs.nth(0).fill(yesterdayDate);
         await this.dateInputs.nth(1).fill(yesterdayDate);
     }
 
     async enterCustomStartDate() {
         const yesterdayDate = await this.getYesterdayDate();
-
         await this.dateInputs.nth(0).fill(yesterdayDate);
     }
 
