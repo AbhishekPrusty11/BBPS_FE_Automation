@@ -3,7 +3,7 @@ const { setupAuth } = require('../Pages/Hooks');
 const creatBiller= require('../Fixtures/testData/CreateBiller.json');
 
 
-test.describe('BOU Reports', () => {
+test.describe('Biller Activation', () => {
   
     test.beforeEach(async ({ page }) => {
         await setupAuth(page, 'Maker')
@@ -11,15 +11,10 @@ test.describe('BOU Reports', () => {
 
       const scenario = creatBiller[0];
 
-    test('Biiler List',async({page})=>{
-        await page.getByText('Biller', { exact: true }).click();
-        await page.locator('.zoom-animation').waitFor({ state: 'hidden', timeout: 30000 });
-        await page.getByText('Biller List', { exact: true }).click();
-        await page.getByPlaceholder('Search here....').fill('abcd xyz')
-        await page.locator('[data-field="action"] button').first().click();
-        await page.getByText('Deactivate').click();
-        await page.pause();
-
+    test('Biller Activate and Deactivate',async({page,billerlist})=>{
+        await billerlist.OpenbillerList();
+        await billerlist.searchBiller(scenario.data['Biller Name'])
+        await billerlist.clikkDeactivate();
 
     })
 

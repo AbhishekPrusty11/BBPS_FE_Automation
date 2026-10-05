@@ -4,13 +4,12 @@ const BillerData = require('../Fixtures/testData/BillerOnboard.json');
 
 
 test.describe('BOU Reports', () => {
-    // test.describe.configure({ mode: 'parallel' });
+   
     test.beforeEach(async ({ page }) => {
         await setupAuth(page, 'Maker')
     })
 
-
-    test('Custom Reports', async ({ page, bouReports }) => {
+    test('Custom Reports', async ({ bouReports }) => {
 
         await bouReports.openReportCenter();
         await bouReports.openBOUReport();
@@ -24,7 +23,6 @@ test.describe('BOU Reports', () => {
 
     test('Periodic Reports', async ({ page, bouReports }) => {
 
-        // const bouReportsPage = new BOUReportsPage(page);
         await bouReports.openReportCenter();
         await bouReports.openBOUReport();
         await bouReports.openPeriodicTab();
@@ -33,7 +31,6 @@ test.describe('BOU Reports', () => {
         await bouReports.enterBillerUsername("SATYA1234");
         await bouReports.selectBiller();
         await bouReports.search();
-        await page.pause();
 
     })
 
@@ -46,10 +43,7 @@ test.describe('BOU Reports', () => {
         await bouReports.enterReferenceId("5646476576");
         await bouReports.enterBillerUsername("SATYA1234");
         await bouReports.selectBiller();
-        await bouReports.search();
-        await page.pause();
-
-        
+        await bouReports.search();    
 
     })
 
