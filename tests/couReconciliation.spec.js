@@ -1,10 +1,12 @@
 const { test } = require('../Fixtures/customFixtures/pageFixtures');
 const { setupAuth } = require('../Pages/Hooks');
 
-test.describe('Biller Creation', () => {
-    test.beforeEach(async ({ page }) => {
-        await setupAuth(page, 'Maker')
-    })
+const roles = ['Maker', 'Checker'];
+for (const role of roles) {
+    test.describe(`COU Reconciliation - ${role}`, () => {
+        test.beforeEach(async ({ page }) => {
+            await setupAuth(page, role)
+        })
 
     test('COU file Upload Reconciliation', async ({ reconciliation }) => {
 
@@ -13,7 +15,7 @@ test.describe('Biller Creation', () => {
         await reconciliation.selectChannelType('All');     
         await reconciliation.COUuploadFile();
         await reconciliation.couFileUpload();
-        await page.pause();
+
     })
     test('COU Reconciliation History', async ({ reconciliation }) => {
 
@@ -22,3 +24,4 @@ test.describe('Biller Creation', () => {
     })
  
 })
+}

@@ -11,7 +11,7 @@ test.describe('Biller Activation', () => {
 
       const scenario = creatBiller[0];
 
-    test('Biller Activate and Deactivate',async({page,billerlist})=>{
+    test('Biller Activate and Deactivate',async({billerlist})=>{
         await billerlist.OpenbillerList();
         await billerlist.searchBiller(scenario.data['Biller Name'])
         await billerlist.clikkDeactivate();

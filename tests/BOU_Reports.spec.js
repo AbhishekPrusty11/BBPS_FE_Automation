@@ -3,53 +3,56 @@ const { setupAuth } = require('../Pages/Hooks');
 const BillerData = require('../Fixtures/testData/BillerOnboard.json');
 
 
-test.describe('BOU Reports', () => {
-   
-    test.beforeEach(async ({ page }) => {
-        await setupAuth(page, 'Maker')
-    })
 
-    test('Custom Reports', async ({ bouReports }) => {
+const roles = ['Maker', 'Checker','Biller'];
+for (const role of roles) {
+    test.describe(`BOU Reports - ${role}`, () => {
 
-        await bouReports.openReportCenter();
-        await bouReports.openBOUReport();
-        await bouReports.openCustomTab();
-        await bouReports.enterCustomDateRange();
-        await bouReports.enterBillerUsername("SATYA1234");
-        await bouReports.selectBiller();
-        await bouReports.selectReportType();
-        await bouReports.search();
-    })
+        test.beforeEach(async ({ page }) => {
+            await setupAuth(page, role)
+        })
 
-    test('Periodic Reports', async ({ page, bouReports }) => {
+        test('Custom Reports', async ({ bouReports }) => {
 
-        await bouReports.openReportCenter();
-        await bouReports.openBOUReport();
-        await bouReports.openPeriodicTab();
-        await bouReports.selectPeriodicRange();
-        await bouReports.selectReportType();
-        await bouReports.enterBillerUsername("SATYA1234");
-        await bouReports.selectBiller();
-        await bouReports.search();
+            await bouReports.openReportCenter();
+            await bouReports.openBOUReport();
+            await bouReports.openCustomTab();
+            await bouReports.enterCustomDateRange();
+            await bouReports.enterBillerUsername("SATYA1234");
+            await bouReports.selectBiller();
+            await bouReports.selectReportType();
+            await bouReports.search();
+        })
 
-    })
+        test('Periodic Reports', async ({ page, bouReports }) => {
 
-    test('Combination Search', async ({ page, bouReports }) => {
+            await bouReports.openReportCenter();
+            await bouReports.openBOUReport();
+            await bouReports.openPeriodicTab();
+            await bouReports.selectPeriodicRange();
+            await bouReports.selectReportType();
+            await bouReports.enterBillerUsername("SATYA1234");
+            await bouReports.selectBiller();
+            await bouReports.search();
 
-        await bouReports.openReportCenter();
-        await bouReports.openBOUReport();
-        await bouReports.openCombinationSearchTab();
-        await bouReports.enterCustomStartDate();
-        await bouReports.enterReferenceId("5646476576");
-        await bouReports.enterBillerUsername("SATYA1234");
-        await bouReports.selectBiller();
-        await bouReports.search();    
+        })
 
-    })
+        test('Combination Search', async ({ page, bouReports }) => {
+
+            await bouReports.openReportCenter();
+            await bouReports.openBOUReport();
+            await bouReports.openCombinationSearchTab();
+            await bouReports.enterCustomStartDate();
+            await bouReports.enterReferenceId("5646476576");
+            await bouReports.enterBillerUsername("SATYA1234");
+            await bouReports.selectBiller();
+            await bouReports.search();
+
+        })
 
 
 
-});
+    });
 
-
+}
 

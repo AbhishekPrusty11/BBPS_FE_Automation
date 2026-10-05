@@ -11,20 +11,20 @@ test.describe('Login Tests', () => {
 
     });
 
-    // test('Biller Login', async ({ page }) => {
+    test('Biller Login', async ({ page }) => {
 
-    //     await setupAuth(page, 'Biller');
+        await setupAuth(page, 'Biller');
 
-    //     await expect(page).toHaveURL(/\/biller\/dashboard/);
+        await expect(page).toHaveURL(/\/biller\/dashboard/);
 
-    // });
+    });
 
-    // test('Checker Login', async ({ page }) => {
+    test('Checker Login', async ({ page }) => {
 
-    //     await setupAuth(page, 'Checker');
+        await setupAuth(page, 'Checker');
 
-    //     await expect(page).toHaveURL(/\/admin\/dashboard/);
+        await expect(page).toHaveURL(/\/admin\/dashboard/);
 
-    // });
+    });
 
 });

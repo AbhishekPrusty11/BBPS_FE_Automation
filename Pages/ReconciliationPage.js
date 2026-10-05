@@ -64,7 +64,7 @@ class ReconciliationPage {
         // From Date
         await this.chooseDateButtons.nth(0).click();
 
-        await expect(this.page.getByRole('grid', { name: /September 2026/ })).toBeVisible();
+        await expect(this.page.getByRole('grid', { name: /October 2026/ })).toBeVisible();
 
         await this.page.getByRole('gridcell', { name: day, exact: true }).click();
 

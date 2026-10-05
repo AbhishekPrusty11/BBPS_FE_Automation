@@ -3,9 +3,11 @@ const { setupAuth } = require('../Pages/Hooks');
 const BillerData = require('../Fixtures/testData/BillerOnboard.json');
 
 
-test.describe('COU Reports', () => {
+const roles = ['Maker', 'Checker'];
+for (const role of roles) {
+test.describe(`COU Reports - ${role}`, () => {
     test.beforeEach(async ({ page }) => {
-        await setupAuth(page, 'Checker')
+        await setupAuth(page, role)
     })
 
     test('Custom Reports', async ({ couReports }) => {
@@ -46,5 +48,5 @@ test.describe('COU Reports', () => {
 
 });
 
-
+}
 
