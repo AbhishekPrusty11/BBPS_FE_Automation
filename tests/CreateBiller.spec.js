@@ -11,7 +11,7 @@ test.describe('Biller Creation', () => {
 
     const scenario = BillerDetails[0];
 
-    test(`Create Biller - ${scenario.type} Details`, async ({ page, createbiller }) => {
+    test(`Create Biller - ${scenario.type} Details`, async ({ createbiller }) => {
 
         await createbiller.openCreateBiller();
         await createbiller.fillBillerDetails(scenario.data);

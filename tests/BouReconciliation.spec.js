@@ -8,13 +8,13 @@ for (const role of roles) {
             await setupAuth(page, role)
         })
 
-    test('Dates Reconciliation', async ({ page, reconciliation }) => {
+    test('Dates Reconciliation', async ({ reconciliation }) => {
 
         await reconciliation.openBOUReconciliationMenu();
         await reconciliation.enterCustomDateRange();
        
     })
-    test('File Upload Reconciliation', async ({ page, reconciliation }) => {
+    test('File Upload Reconciliation', async ({ reconciliation }) => {
 
         await reconciliation.openBOUReconciliationMenu();
         await reconciliation.enterCustomDateRange();
@@ -22,7 +22,7 @@ for (const role of roles) {
         await reconciliation.clkonReconcileBtn();
         
     })
-    test('Reconciliation History', async ({ page, reconciliation }) => {
+    test('Reconciliation History', async ({ reconciliation }) => {
         await reconciliation.openBOUReconciliationMenu();
         await reconciliation.historyBtnClick();
       

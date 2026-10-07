@@ -123,9 +123,7 @@ class COUReportsPage {
 
 
     async selectDate(date) {
-        await this.page
-            .getByRole('gridcell', { name: date.toString() })
-            .click();
+        await this.page.getByRole('gridcell', { name: date.toString() }).click();
     }
 
 
@@ -135,8 +133,7 @@ class COUReportsPage {
 
 
     async selectMonth(month) {
-        await this.page.getByRole('radio', { name: month })
-            .click();
+        await this.page.getByRole('radio', { name: month }).click();
     }
 
 

@@ -3,9 +3,10 @@ const { setupAuth } = require('../Pages/Hooks');
 const BillerData = require('../Fixtures/testData/BillerOnboard.json');
 
 
-
 const roles = ['Maker', 'Checker','Biller'];
+
 for (const role of roles) {
+
     test.describe(`BOU Reports - ${role}`, () => {
 
         test.beforeEach(async ({ page }) => {
@@ -24,7 +25,7 @@ for (const role of roles) {
             await bouReports.search();
         })
 
-        test('Periodic Reports', async ({ page, bouReports }) => {
+        test('Periodic Reports', async ({ bouReports }) => {
 
             await bouReports.openReportCenter();
             await bouReports.openBOUReport();
@@ -37,7 +38,7 @@ for (const role of roles) {
 
         })
 
-        test('Combination Search', async ({ page, bouReports }) => {
+        test('Combination Search', async ({ bouReports }) => {
 
             await bouReports.openReportCenter();
             await bouReports.openBOUReport();
@@ -49,8 +50,6 @@ for (const role of roles) {
             await bouReports.search();
 
         })
-
-
 
     });
 

@@ -17,7 +17,7 @@ cache:
 install_dependencies:
   stage: install
   tags:
-    - k8-deploy-runner
+    - k8-onprem-deploy-runner
   script:
     - echo "Installing dependencies..."
     - npm install
@@ -33,7 +33,7 @@ run_api_tests:
   timeout: 30m
   allow_failure: true
   tags:
-    - k8-deploy-runner   
+    - k8-onprem-deploy-runner   
   dependencies:
     - install_dependencies
   script:

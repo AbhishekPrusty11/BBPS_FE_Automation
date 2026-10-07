@@ -15,7 +15,6 @@ test.describe(`COU Reports - ${role}`, () => {
         await couReports.openReportCenter();
         await couReports.openCOUReport();
         await couReports.openCustomTab();
-
         await couReports.selectReportType();
         await couReports.selectChannelType();
     })
