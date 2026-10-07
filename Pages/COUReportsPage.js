@@ -31,12 +31,12 @@ class COUReportsPage {
         // Report type
         this.reportType = page.locator('#reportType');
 
-        this.couTransactionReport = page.getByRole('option', {name: 'COU Transaction Report'});
+        this.couTransactionReport = page.getByRole('option', { name: 'COU Transaction Report' });
 
         // Channel type
         this.channelType = page.locator('#channelType');
 
-        this.allChannel = page.getByRole('option', {name: 'ALL'});
+        this.allChannel = page.getByRole('option', { name: 'ALL' });
 
         // Combination Search
         this.combinationDatePicker = page.locator('input[name="date"]').locator('..').getByRole('button');
@@ -123,7 +123,10 @@ class COUReportsPage {
 
 
     async selectDate(date) {
-        await this.page.getByRole('gridcell', { name: date.toString() }).click();
+        // await this.page.getByRole('gridcell', { name: date.toString() }).click();
+        const dateCell = this.page.getByRole('gridcell', { name: String(date), exact: true });
+
+        await dateCell.click();
     }
 
 
@@ -152,7 +155,10 @@ class COUReportsPage {
 
 
     async selectCombinationDate(date) {
-        await this.page.getByRole('gridcell', { name: date.toString() }).click();
+
+        const dateCell = this.page.getByRole('gridcell', { name: String(date), exact: true });
+
+        await dateCell.click();
     }
 
 
@@ -228,7 +234,7 @@ class COUReportsPage {
     }
 
 
-    async performCombinationSearch(date,channel,refId,transactionRefId) {
+    async performCombinationSearch(date, channel, refId, transactionRefId) {
 
         await this.openCombinationSearchTab();
 
@@ -246,4 +252,4 @@ class COUReportsPage {
     }
 }
 
-module.exports = {COUReportsPage};
+module.exports = { COUReportsPage };

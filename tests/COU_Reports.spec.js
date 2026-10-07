@@ -23,7 +23,7 @@ test.describe(`COU Reports - ${role}`, () => {
 
         await couReports.navigateToCOUReports();
 
-        await couReports.searchPeriodicReportByDate(14);
+        await couReports.searchPeriodicReportByDate(5);
 
     })
 
@@ -31,7 +31,7 @@ test.describe(`COU Reports - ${role}`, () => {
 
         await couReports.navigateToCOUReports();
 
-        await couReports.searchPeriodicReportByMonth('Aug');
+        await couReports.searchPeriodicReportByMonth('Oct');
 
     })
 
@@ -39,7 +39,7 @@ test.describe(`COU Reports - ${role}`, () => {
 
         await couReports.navigateToCOUReports();
 
-        await couReports.performCombinationSearch(12, 'Internet Banking (Post-login)', '5646476576', '1234567890');
+        await couReports.performCombinationSearch(5, 'Internet Banking (Post-login)', '5646476576', '1234567890');
 
     })
 
