@@ -28,14 +28,14 @@ function isTokenExpired(token) {
 const dashboardUrls = {
 
     //Staging URLs
-    Maker: 'https://bob-bbps-admin-stage.iserveu.online/admin/dashboard',
-    Biller: 'https://bob-bbps-admin-stage.iserveu.online/biller/dashboard',
-    Checker: 'https://bob-bbps-admin-stage.iserveu.online/admin/dashboard',
+    // Maker: 'https://bob-bbps-admin-stage.iserveu.online/admin/dashboard',
+    // Biller: 'https://bob-bbps-admin-stage.iserveu.online/biller/dashboard',
+    // Checker: 'https://bob-bbps-admin-stage.iserveu.online/admin/dashboard',
 
     //UAT URLs
-    // Maker: 'https://bob-bank-uat.isampurna.com/admin/dashboard',
-    // Biller: 'https://bob-bank-uat.isampurna.com/biller/dashboard',
-    // Checker: 'https://bob-bank-uat.isampurna.com/admin/dashboard'
+    Maker: 'https://bob-bank-uat.isampurna.com/admin/dashboard',
+    Biller: 'https://bob-bank-uat.isampurna.com/biller/dashboard',
+    Checker: 'https://bob-bank-uat.isampurna.com/admin/dashboard'
 };
 
 // ==================================================
@@ -46,7 +46,7 @@ const dashboardUrls = {
 async function setupAuth(page, role = 'Maker') {
 
     const dashboardUrl = dashboardUrls[role];
-    const user = envConfig.STAG.credentials[role];
+    const user = envConfig.UAT.credentials[role];
 
     if (!dashboardUrl) {
         throw new Error(`Dashboard URL not configured for role: ${role}`);

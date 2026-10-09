@@ -1,7 +1,8 @@
 {
   "dependencies": {
     "dotenv": "^17.4.2",
-    "playwright": "^1.61.1"
+    "playwright": "^1.61.1",
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@playwright/test": "^1.63.0",

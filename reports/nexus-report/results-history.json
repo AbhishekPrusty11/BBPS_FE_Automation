@@ -1,0 +1,1775 @@
+[
+  {
+    "id": "badc1754af1944f68b2b-a05b3cbee98e7e19f974",
+    "key": " › BOB BBPS › login.spec.js › Login Tests › Maker Login",
+    "file": "tests\\login.spec.js",
+    "executedAt": "2026-10-09T12:47:31.650Z",
+    "tcId": "TC-GENERIC",
+    "title": "Maker Login",
+    "module": "Login & Authentication",
+    "portal": "Maker",
+    "userName": "SHILPAMAKER",
+    "status": "passed",
+    "knownDefect": false,
+    "durationMs": 5824,
+    "error": null,
+    "steps": [
+      {
+        "title": "Launch browser",
+        "durationMs": 3387,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Create context",
+        "durationMs": 1455,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Create page",
+        "durationMs": 2283,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Navigate — bob-bank-uat.isampurna.com/admin/login",
+        "durationMs": 972,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Evaluate",
+        "durationMs": 85,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Navigate — bob-bank-uat.isampurna.com/admin/dashboard",
+        "durationMs": 146,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Expect \"toHaveURL\"",
+        "durationMs": 351,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Close context",
+        "durationMs": 86,
+        "error": null,
+        "technicalProof": []
+      }
+    ],
+    "attachments": [
+      {
+        "name": "screenshot",
+        "contentType": "image/png",
+        "path": "D:\\BBPS_E2E_Automation\\reports\\nexus-report\\screenshots\\TC-GENERIC_01f014_passed_1.png",
+        "relativePath": "screenshots/TC-GENERIC_01f014_passed_1.png",
+        "base64": null
+      }
+    ],
+    "primaryScreenshot": "screenshots/TC-GENERIC_01f014_passed_1.png",
+    "location": "login.spec.js:6"
+  },
+  {
+    "id": "badc1754af1944f68b2b-f7e8c16356832bced7e8",
+    "key": " › BOB BBPS › login.spec.js › Login Tests › Biller Login",
+    "file": "tests\\login.spec.js",
+    "executedAt": "2026-10-09T12:47:39.141Z",
+    "tcId": "TC-GENERIC",
+    "title": "Biller Login",
+    "module": "Login & Authentication",
+    "portal": "Biller",
+    "userName": "DEEPIKA2341",
+    "status": "failed",
+    "knownDefect": false,
+    "durationMs": 5271,
+    "error": {
+      "message": "Error: locator.waitFor: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('//div[@role=\\'dialog\\']') to be visible\u001b[22m\n",
+      "stack": "Error: locator.waitFor: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('//div[@role=\\'dialog\\']') to be visible\u001b[22m\n\n    at LoginAndLogout.validLogin (D:\\BBPS_E2E_Automation\\Pages\\LoginAndLogout.js:65:27)\n    at setupAuth (D:\\BBPS_E2E_Automation\\Pages\\Hooks.js:138:5)\n    at D:\\BBPS_E2E_Automation\\tests\\login.spec.js:16:9"
+    },
+    "steps": [
+      {
+        "title": "Create context",
+        "durationMs": 89,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Create page",
+        "durationMs": 1910,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Navigate — bob-bank-uat.isampurna.com/admin/login",
+        "durationMs": 1450,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Evaluate",
+        "durationMs": 48,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Fill \"DEEPIKA2341\" — getByPlaceholder('Enter your Username')",
+        "durationMs": 438,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Fill \"Testing@2028\" — getByPlaceholder('Enter your Password')",
+        "durationMs": 43,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Click — locator('.PrivateSwitchBase-input')",
+        "durationMs": 88,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Click — getByRole('button', { name: 'Login' })",
+        "durationMs": 87,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "❌ FAILED: Wait for selector — locator('//div[@role=\\'dialog\\']') — Error: locator.waitFor: Target page, context or browser has been closed",
+        "durationMs": 988,
+        "error": "Error: locator.waitFor: Target page, context or browser has been closed\nCall log:\n  - waiting for locator('//div[@role=\\'dialog\\']') to be visible",
+        "technicalProof": []
+      },
+      {
+        "title": "Close context",
+        "durationMs": 80,
+        "error": null,
+        "technicalProof": []
+      }
+    ],
+    "attachments": [
+      {
+        "name": "error-context",
+        "contentType": "text/markdown",
+        "path": "D:\\BBPS_E2E_Automation\\test-results\\login-Login-Tests-Biller-Login-BOB-BBPS\\error-context.md",
+        "relativePath": null,
+        "base64": null
+      }
+    ],
+    "primaryScreenshot": null,
+    "location": "login.spec.js:14"
+  },
+  {
+    "id": "badc1754af1944f68b2b-b70f08071f1642fd5610",
+    "key": " › BOB BBPS › login.spec.js › Login Tests › Checker Login",
+    "file": "tests\\login.spec.js",
+    "executedAt": "2026-10-09T12:47:50.222Z",
+    "tcId": "TC-GENERIC",
+    "title": "Checker Login",
+    "module": "Login & Authentication",
+    "portal": "Checker",
+    "userName": "SANGRAMCHECKERUAT",
+    "status": "passed",
+    "knownDefect": false,
+    "durationMs": 6168,
+    "error": null,
+    "steps": [
+      {
+        "title": "Launch browser",
+        "durationMs": 3006,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Create context",
+        "durationMs": 1876,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Create page",
+        "durationMs": 2556,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Navigate — bob-bank-uat.isampurna.com/admin/login",
+        "durationMs": 815,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Evaluate",
+        "durationMs": 64,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Navigate — bob-bank-uat.isampurna.com/admin/dashboard",
+        "durationMs": 451,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Expect \"toHaveURL\"",
+        "durationMs": 164,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Close context",
+        "durationMs": 41,
+        "error": null,
+        "technicalProof": []
+      }
+    ],
+    "attachments": [
+      {
+        "name": "screenshot",
+        "contentType": "image/png",
+        "path": "D:\\BBPS_E2E_Automation\\reports\\nexus-report\\screenshots\\TC-GENERIC_08cf13_passed_1.png",
+        "relativePath": "screenshots/TC-GENERIC_08cf13_passed_1.png",
+        "base64": null
+      }
+    ],
+    "primaryScreenshot": "screenshots/TC-GENERIC_08cf13_passed_1.png",
+    "location": "login.spec.js:22"
+  },
+  {
+    "id": "fefe710ca506041123eb-785780d2fed40e947b20",
+    "key": " › BOB BBPS › BillerOnboarding.spec.js › Biller Onboarding › Basic Details onboarding",
+    "file": "tests\\BillerOnboarding.spec.js",
+    "executedAt": "2026-10-09T11:25:51.935Z",
+    "tcId": "TC-GENERIC",
+    "title": "Basic Details onboarding",
+    "module": "Biller Onboarding",
+    "portal": "Biller",
+    "userName": "DEEPIKA2341",
+    "status": "failed",
+    "knownDefect": false,
+    "durationMs": 20849,
+    "error": {
+      "message": "Error: locator.waitFor: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('//div[@role=\\'dialog\\']') to be visible\u001b[22m\n",
+      "stack": "Error: locator.waitFor: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('//div[@role=\\'dialog\\']') to be visible\u001b[22m\n\n    at LoginAndLogout.validLogin (D:\\BBPS_E2E_Automation\\Pages\\LoginAndLogout.js:65:27)\n    at setupAuth (D:\\BBPS_E2E_Automation\\Pages\\Hooks.js:138:5)\n    at D:\\BBPS_E2E_Automation\\tests\\BillerOnboarding.spec.js:10:9"
+    },
+    "steps": [
+      {
+        "title": "Executed automated workflow steps",
+        "durationMs": 20849,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "❌ FAILED: Error: locator.waitFor: Target page, context or browser has been closed",
+        "durationMs": 0,
+        "error": "Error: locator.waitFor: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('//div[@role=\\'dialog\\']') to be visible\u001b[22m\n",
+        "technicalProof": []
+      }
+    ],
+    "attachments": [
+      {
+        "name": "error-context",
+        "contentType": "text/markdown",
+        "path": "D:\\BBPS_E2E_Automation\\test-results\\BillerOnboarding-Biller-Onboarding-Basic-Details-onboarding-BOB-BBPS\\error-context.md",
+        "relativePath": null,
+        "base64": null
+      }
+    ],
+    "primaryScreenshot": null,
+    "location": "BillerOnboarding.spec.js:15"
+  },
+  {
+    "id": "1183083ef6f14abe9647-cb065b7aeee58e522bb7",
+    "key": " › BOB BBPS › ApproveRejectBiller.spec.js › Approve and Reject Biller › Approve Biller",
+    "file": "tests\\ApproveRejectBiller.spec.js",
+    "executedAt": "2026-10-09T11:25:53.506Z",
+    "tcId": "TC-GENERIC",
+    "title": "Approve Biller",
+    "module": "Approve and Reject Biller",
+    "portal": "Checker",
+    "userName": "SANGRAMCHECKERUAT",
+    "status": "failed",
+    "knownDefect": false,
+    "durationMs": 25260,
+    "error": {
+      "message": "Error: page.waitForURL: Target page, context or browser has been closed\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================",
+      "stack": "Error: page.waitForURL: Target page, context or browser has been closed\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================\n    at setupAuth (D:\\BBPS_E2E_Automation\\Pages\\Hooks.js:142:16)\n    at D:\\BBPS_E2E_Automation\\tests\\ApproveRejectBiller.spec.js:9:9"
+    },
+    "steps": [
+      {
+        "title": "Executed automated workflow steps",
+        "durationMs": 25260,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "❌ FAILED: Error: page.waitForURL: Target page, context or browser has been closed",
+        "durationMs": 0,
+        "error": "Error: page.waitForURL: Target page, context or browser has been closed\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================",
+        "technicalProof": []
+      }
+    ],
+    "attachments": [
+      {
+        "name": "error-context",
+        "contentType": "text/markdown",
+        "path": "D:\\BBPS_E2E_Automation\\test-results\\ApproveRejectBiller-Approve-and-Reject-Biller-Approve-Biller-BOB-BBPS\\error-context.md",
+        "relativePath": null,
+        "base64": null
+      }
+    ],
+    "primaryScreenshot": null,
+    "location": "ApproveRejectBiller.spec.js:14"
+  },
+  {
+    "id": "ed94063ba8ee1edda714-f5ecd03d87925cfd3161",
+    "key": " › BOB BBPS › billerList.spec.js › Biller Activation › Biller Activate and Deactivate",
+    "file": "tests\\billerList.spec.js",
+    "executedAt": "2026-10-09T11:26:03.662Z",
+    "tcId": "TC-GENERIC",
+    "title": "Biller Activate and Deactivate",
+    "module": "Biller Activation",
+    "portal": "Maker",
+    "userName": "SHILPAMAKER",
+    "status": "timedOut",
+    "knownDefect": false,
+    "durationMs": 31372,
+    "error": {
+      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+      "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+    },
+    "steps": [
+      {
+        "title": "Executed automated workflow steps",
+        "durationMs": 31372,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "❌ FAILED: \u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+        "durationMs": 0,
+        "error": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+        "technicalProof": []
+      }
+    ],
+    "attachments": [
+      {
+        "name": "screenshot",
+        "contentType": "image/png",
+        "path": "D:\\BBPS_E2E_Automation\\reports\\nexus-report\\screenshots\\TC-GENERIC_f65c4b_timedOut_1.png",
+        "relativePath": "screenshots/TC-GENERIC_f65c4b_timedOut_1.png",
+        "base64": null
+      },
+      {
+        "name": "error-context",
+        "contentType": "text/markdown",
+        "path": "D:\\BBPS_E2E_Automation\\test-results\\billerList-Biller-Activation-Biller-Activate-and-Deactivate-BOB-BBPS\\error-context.md",
+        "relativePath": null,
+        "base64": null
+      }
+    ],
+    "primaryScreenshot": "screenshots/TC-GENERIC_f65c4b_timedOut_1.png",
+    "location": "billerList.spec.js:14"
+  },
+  {
+    "id": "f58d08b28dfcae8b40a9-34255fdbc66b9e2fdc45",
+    "key": " › BOB BBPS › COU_Reports.spec.js › COU Reports - Maker › Custom Reports",
+    "file": "tests\\COU_Reports.spec.js",
+    "executedAt": "2026-10-09T11:26:30.465Z",
+    "tcId": "TC-GENERIC",
+    "title": "Custom Reports",
+    "module": "COU Reports",
+    "portal": "Maker",
+    "userName": "SHILPAMAKER",
+    "status": "failed",
+    "knownDefect": false,
+    "durationMs": 13157,
+    "error": {
+      "message": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Report Center' })\u001b[22m\n\u001b[2m    - locator resolved to <button tabindex=\"0\" type=\"button\" class=\"MuiButtonBase-root css-16gtsh6\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n\u001b[2m  - element was detached from the DOM, retrying\u001b[22m\n",
+      "stack": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Report Center' })\u001b[22m\n\u001b[2m    - locator resolved to <button tabindex=\"0\" type=\"button\" class=\"MuiButtonBase-root css-16gtsh6\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n\u001b[2m  - element was detached from the DOM, retrying\u001b[22m\n\n    at COUReportsPage.openReportCenter (D:\\BBPS_E2E_Automation\\Pages\\COUReportsPage.js:67:39)\n    at D:\\BBPS_E2E_Automation\\tests\\COU_Reports.spec.js:15:26"
+    },
+    "steps": [
+      {
+        "title": "Executed automated workflow steps",
+        "durationMs": 13157,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "❌ FAILED: Error: locator.click: Target page, context or browser has been closed",
+        "durationMs": 0,
+        "error": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Report Center' })\u001b[22m\n\u001b[2m    - locator resolved to <button tabindex=\"0\" type=\"button\" class=\"MuiButtonBase-root css-16gtsh6\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n\u001b[2m  - element was detached from the DOM, retrying\u001b[22m\n",
+        "technicalProof": []
+      }
+    ],
+    "attachments": [
+      {
+        "name": "error-context",
+        "contentType": "text/markdown",
+        "path": "D:\\BBPS_E2E_Automation\\test-results\\COU_Reports-COU-Reports---Maker-Custom-Reports-BOB-BBPS\\error-context.md",
+        "relativePath": null,
+        "base64": null
+      }
+    ],
+    "primaryScreenshot": null,
+    "location": "COU_Reports.spec.js:13"
+  },
+  {
+    "id": "64159d6fba74027d80b3-fe6367b9b4eb9e50cdc1",
+    "key": " › BOB BBPS › BouReconciliation.spec.js › BOU Reconciliation - Maker › Dates Reconciliation",
+    "file": "tests\\BouReconciliation.spec.js",
+    "executedAt": "2026-10-09T11:26:45.567Z",
+    "tcId": "TC-GENERIC",
+    "title": "Dates Reconciliation",
+    "module": "BOU Reconciliation",
+    "portal": "Maker",
+    "userName": "SHILPAMAKER",
+    "status": "timedOut",
+    "knownDefect": false,
+    "durationMs": 30494,
+    "error": {
+      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+      "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+    },
+    "steps": [
+      {
+        "title": "Executed automated workflow steps",
+        "durationMs": 30494,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "❌ FAILED: \u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+        "durationMs": 0,
+        "error": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+        "technicalProof": []
+      }
+    ],
+    "attachments": [
+      {
+        "name": "screenshot",
+        "contentType": "image/png",
+        "path": "D:\\BBPS_E2E_Automation\\reports\\nexus-report\\screenshots\\TC-GENERIC_c03722_timedOut_1.png",
+        "relativePath": "screenshots/TC-GENERIC_c03722_timedOut_1.png",
+        "base64": null
+      },
+      {
+        "name": "error-context",
+        "contentType": "text/markdown",
+        "path": "D:\\BBPS_E2E_Automation\\test-results\\BouReconciliation-BOU-Reco-e8f85--Maker-Dates-Reconciliation-BOB-BBPS\\error-context.md",
+        "relativePath": null,
+        "base64": null
+      }
+    ],
+    "primaryScreenshot": "screenshots/TC-GENERIC_c03722_timedOut_1.png",
+    "location": "BouReconciliation.spec.js:11"
+  },
+  {
+    "id": "758cfb3308aa3651c7cb-b7b85af82c9a26d5a641",
+    "key": " › BOB BBPS › BOU_Reports.spec.js › BOU Reports - Maker › Custom Reports",
+    "file": "tests\\BOU_Reports.spec.js",
+    "executedAt": "2026-10-09T11:26:51.184Z",
+    "tcId": "TC-GENERIC",
+    "title": "Custom Reports",
+    "module": "BOU Reports",
+    "portal": "Maker",
+    "userName": "SHILPAMAKER",
+    "status": "timedOut",
+    "knownDefect": false,
+    "durationMs": 30372,
+    "error": {
+      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+      "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+    },
+    "steps": [
+      {
+        "title": "Executed automated workflow steps",
+        "durationMs": 30372,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "❌ FAILED: \u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+        "durationMs": 0,
+        "error": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+        "technicalProof": []
+      }
+    ],
+    "attachments": [
+      {
+        "name": "screenshot",
+        "contentType": "image/png",
+        "path": "D:\\BBPS_E2E_Automation\\reports\\nexus-report\\screenshots\\TC-GENERIC_7d603e_timedOut_1.png",
+        "relativePath": "screenshots/TC-GENERIC_7d603e_timedOut_1.png",
+        "base64": null
+      },
+      {
+        "name": "error-context",
+        "contentType": "text/markdown",
+        "path": "D:\\BBPS_E2E_Automation\\test-results\\BOU_Reports-BOU-Reports---Maker-Custom-Reports-BOB-BBPS\\error-context.md",
+        "relativePath": null,
+        "base64": null
+      }
+    ],
+    "primaryScreenshot": "screenshots/TC-GENERIC_7d603e_timedOut_1.png",
+    "location": "BOU_Reports.spec.js:16"
+  },
+  {
+    "id": "f58d08b28dfcae8b40a9-5c4272139cdd64ca1bbf",
+    "key": " › BOB BBPS › COU_Reports.spec.js › COU Reports - Maker › Periodic Reports with Date",
+    "file": "tests\\COU_Reports.spec.js",
+    "executedAt": "2026-10-09T11:27:14.058Z",
+    "tcId": "TC-GENERIC",
+    "title": "Periodic Reports with Date",
+    "module": "COU Reports",
+    "portal": "Maker",
+    "userName": "SHILPAMAKER",
+    "status": "failed",
+    "knownDefect": false,
+    "durationMs": 9815,
+    "error": {
+      "message": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Report Center' })\u001b[22m\n\u001b[2m    - locator resolved to <button tabindex=\"0\" type=\"button\" class=\"MuiButtonBase-root css-16gtsh6\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n\u001b[2m  - element was detached from the DOM, retrying\u001b[22m\n",
+      "stack": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Report Center' })\u001b[22m\n\u001b[2m    - locator resolved to <button tabindex=\"0\" type=\"button\" class=\"MuiButtonBase-root css-16gtsh6\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n\u001b[2m  - element was detached from the DOM, retrying\u001b[22m\n\n    at COUReportsPage.openReportCenter (D:\\BBPS_E2E_Automation\\Pages\\COUReportsPage.js:67:39)\n    at COUReportsPage.navigateToCOUReports (D:\\BBPS_E2E_Automation\\Pages\\COUReportsPage.js:196:20)\n    at D:\\BBPS_E2E_Automation\\tests\\COU_Reports.spec.js:24:26"
+    },
+    "steps": [
+      {
+        "title": "Executed automated workflow steps",
+        "durationMs": 9815,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "❌ FAILED: Error: locator.click: Target page, context or browser has been closed",
+        "durationMs": 0,
+        "error": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Report Center' })\u001b[22m\n\u001b[2m    - locator resolved to <button tabindex=\"0\" type=\"button\" class=\"MuiButtonBase-root css-16gtsh6\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n\u001b[2m  - element was detached from the DOM, retrying\u001b[22m\n",
+        "technicalProof": []
+      }
+    ],
+    "attachments": [
+      {
+        "name": "error-context",
+        "contentType": "text/markdown",
+        "path": "D:\\BBPS_E2E_Automation\\test-results\\COU_Reports-COU-Reports---Maker-Periodic-Reports-with-Date-BOB-BBPS\\error-context.md",
+        "relativePath": null,
+        "base64": null
+      }
+    ],
+    "primaryScreenshot": null,
+    "location": "COU_Reports.spec.js:22"
+  },
+  {
+    "id": "758cfb3308aa3651c7cb-0dfc2163e90551c69765",
+    "key": " › BOB BBPS › BOU_Reports.spec.js › BOU Reports - Maker › Periodic Reports",
+    "file": "tests\\BOU_Reports.spec.js",
+    "executedAt": "2026-10-09T11:27:15.953Z",
+    "tcId": "TC-GENERIC",
+    "title": "Periodic Reports",
+    "module": "BOU Reports",
+    "portal": "Maker",
+    "userName": "SHILPAMAKER",
+    "status": "failed",
+    "knownDefect": false,
+    "durationMs": 12296,
+    "error": {
+      "message": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Report Center' })\u001b[22m\n\u001b[2m    - locator resolved to <button tabindex=\"0\" type=\"button\" class=\"MuiButtonBase-root css-16gtsh6\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n\u001b[2m  - element was detached from the DOM, retrying\u001b[22m\n",
+      "stack": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Report Center' })\u001b[22m\n\u001b[2m    - locator resolved to <button tabindex=\"0\" type=\"button\" class=\"MuiButtonBase-root css-16gtsh6\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n\u001b[2m  - element was detached from the DOM, retrying\u001b[22m\n\n    at BOUReportsPage.openReportCenter (D:\\BBPS_E2E_Automation\\Pages\\BOUReportsPage.js:64:39)\n    at D:\\BBPS_E2E_Automation\\tests\\BOU_Reports.spec.js:30:30"
+    },
+    "steps": [
+      {
+        "title": "Executed automated workflow steps",
+        "durationMs": 12296,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "❌ FAILED: Error: locator.click: Target page, context or browser has been closed",
+        "durationMs": 0,
+        "error": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Report Center' })\u001b[22m\n\u001b[2m    - locator resolved to <button tabindex=\"0\" type=\"button\" class=\"MuiButtonBase-root css-16gtsh6\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n\u001b[2m  - element was detached from the DOM, retrying\u001b[22m\n",
+        "technicalProof": []
+      }
+    ],
+    "attachments": [
+      {
+        "name": "error-context",
+        "contentType": "text/markdown",
+        "path": "D:\\BBPS_E2E_Automation\\test-results\\BOU_Reports-BOU-Reports---Maker-Periodic-Reports-BOB-BBPS\\error-context.md",
+        "relativePath": null,
+        "base64": null
+      }
+    ],
+    "primaryScreenshot": null,
+    "location": "BOU_Reports.spec.js:28"
+  },
+  {
+    "id": "64159d6fba74027d80b3-f5ce1e54ebf6594ce702",
+    "key": " › BOB BBPS › BouReconciliation.spec.js › BOU Reconciliation - Maker › File Upload Reconciliation",
+    "file": "tests\\BouReconciliation.spec.js",
+    "executedAt": "2026-10-09T11:27:41.188Z",
+    "tcId": "TC-GENERIC",
+    "title": "File Upload Reconciliation",
+    "module": "BOU Reconciliation",
+    "portal": "Maker",
+    "userName": "SHILPAMAKER",
+    "status": "timedOut",
+    "knownDefect": false,
+    "durationMs": 30371,
+    "error": {
+      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+      "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+    },
+    "steps": [
+      {
+        "title": "Executed automated workflow steps",
+        "durationMs": 30371,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "❌ FAILED: \u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+        "durationMs": 0,
+        "error": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+        "technicalProof": []
+      }
+    ],
+    "attachments": [
+      {
+        "name": "screenshot",
+        "contentType": "image/png",
+        "path": "D:\\BBPS_E2E_Automation\\reports\\nexus-report\\screenshots\\TC-GENERIC_e37083_timedOut_1.png",
+        "relativePath": "screenshots/TC-GENERIC_e37083_timedOut_1.png",
+        "base64": null
+      },
+      {
+        "name": "error-context",
+        "contentType": "text/markdown",
+        "path": "D:\\BBPS_E2E_Automation\\test-results\\BouReconciliation-BOU-Reco-87130--File-Upload-Reconciliation-BOB-BBPS\\error-context.md",
+        "relativePath": null,
+        "base64": null
+      }
+    ],
+    "primaryScreenshot": "screenshots/TC-GENERIC_e37083_timedOut_1.png",
+    "location": "BouReconciliation.spec.js:17"
+  },
+  {
+    "id": "758cfb3308aa3651c7cb-a474ef5ec02783551c4e",
+    "key": " › BOB BBPS › BOU_Reports.spec.js › BOU Reports - Maker › Combination Search",
+    "file": "tests\\BOU_Reports.spec.js",
+    "executedAt": "2026-10-09T11:27:51.951Z",
+    "tcId": "TC-GENERIC",
+    "title": "Combination Search",
+    "module": "BOU Reports",
+    "portal": "Maker",
+    "userName": "SHILPAMAKER",
+    "status": "failed",
+    "knownDefect": false,
+    "durationMs": 26347,
+    "error": {
+      "message": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Report Center' })\u001b[22m\n\u001b[2m    - locator resolved to <button tabindex=\"0\" type=\"button\" class=\"MuiButtonBase-root css-16gtsh6\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    3 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\u001b[2m  - element was detached from the DOM, retrying\u001b[22m\n",
+      "stack": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Report Center' })\u001b[22m\n\u001b[2m    - locator resolved to <button tabindex=\"0\" type=\"button\" class=\"MuiButtonBase-root css-16gtsh6\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    3 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\u001b[2m  - element was detached from the DOM, retrying\u001b[22m\n\n    at BOUReportsPage.openReportCenter (D:\\BBPS_E2E_Automation\\Pages\\BOUReportsPage.js:64:39)\n    at D:\\BBPS_E2E_Automation\\tests\\BOU_Reports.spec.js:43:30"
+    },
+    "steps": [
+      {
+        "title": "Executed automated workflow steps",
+        "durationMs": 26347,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "❌ FAILED: Error: locator.click: Target page, context or browser has been closed",
+        "durationMs": 0,
+        "error": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Report Center' })\u001b[22m\n\u001b[2m    - locator resolved to <button tabindex=\"0\" type=\"button\" class=\"MuiButtonBase-root css-16gtsh6\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    3 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\u001b[2m  - element was detached from the DOM, retrying\u001b[22m\n",
+        "technicalProof": []
+      }
+    ],
+    "attachments": [
+      {
+        "name": "error-context",
+        "contentType": "text/markdown",
+        "path": "D:\\BBPS_E2E_Automation\\test-results\\BOU_Reports-BOU-Reports---Maker-Combination-Search-BOB-BBPS\\error-context.md",
+        "relativePath": null,
+        "base64": null
+      }
+    ],
+    "primaryScreenshot": null,
+    "location": "BOU_Reports.spec.js:41"
+  },
+  {
+    "id": "64159d6fba74027d80b3-99b0f672ada7c662ee8f",
+    "key": " › BOB BBPS › BouReconciliation.spec.js › BOU Reconciliation - Maker › Reconciliation History",
+    "file": "tests\\BouReconciliation.spec.js",
+    "executedAt": "2026-10-09T11:28:08.556Z",
+    "tcId": "TC-GENERIC",
+    "title": "Reconciliation History",
+    "module": "BOU Reconciliation",
+    "portal": "Maker",
+    "userName": "SHILPAMAKER",
+    "status": "failed",
+    "knownDefect": false,
+    "durationMs": 9824,
+    "error": {
+      "message": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByText('Reconciliation', { exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <span class=\"MuiBox-root css-uko8o2\">Reconciliation</span>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n\u001b[2m  - element was detached from the DOM, retrying\u001b[22m\n",
+      "stack": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByText('Reconciliation', { exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <span class=\"MuiBox-root css-uko8o2\">Reconciliation</span>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n\u001b[2m  - element was detached from the DOM, retrying\u001b[22m\n\n    at ReconciliationPage.openBOUReconciliationMenu (D:\\BBPS_E2E_Automation\\Pages\\ReconciliationPage.js:45:39)\n    at D:\\BBPS_E2E_Automation\\tests\\BouReconciliation.spec.js:26:9"
+    },
+    "steps": [
+      {
+        "title": "Executed automated workflow steps",
+        "durationMs": 9824,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "❌ FAILED: Error: locator.click: Target page, context or browser has been closed",
+        "durationMs": 0,
+        "error": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByText('Reconciliation', { exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <span class=\"MuiBox-root css-uko8o2\">Reconciliation</span>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n\u001b[2m  - element was detached from the DOM, retrying\u001b[22m\n",
+        "technicalProof": []
+      }
+    ],
+    "attachments": [
+      {
+        "name": "error-context",
+        "contentType": "text/markdown",
+        "path": "D:\\BBPS_E2E_Automation\\test-results\\BouReconciliation-BOU-Reco-49b24-aker-Reconciliation-History-BOB-BBPS\\error-context.md",
+        "relativePath": null,
+        "base64": null
+      }
+    ],
+    "primaryScreenshot": null,
+    "location": "BouReconciliation.spec.js:25"
+  },
+  {
+    "id": "f58d08b28dfcae8b40a9-ca623b490b7b2581652b",
+    "key": " › BOB BBPS › COU_Reports.spec.js › COU Reports - Maker › Periodic Reports with Month",
+    "file": "tests\\COU_Reports.spec.js",
+    "executedAt": "2026-10-09T11:28:09.674Z",
+    "tcId": "TC-GENERIC",
+    "title": "Periodic Reports with Month",
+    "module": "COU Reports",
+    "portal": "Maker",
+    "userName": "SHILPAMAKER",
+    "status": "timedOut",
+    "knownDefect": false,
+    "durationMs": 30377,
+    "error": {
+      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+      "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+    },
+    "steps": [
+      {
+        "title": "Executed automated workflow steps",
+        "durationMs": 30377,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "❌ FAILED: \u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+        "durationMs": 0,
+        "error": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+        "technicalProof": []
+      }
+    ],
+    "attachments": [
+      {
+        "name": "screenshot",
+        "contentType": "image/png",
+        "path": "D:\\BBPS_E2E_Automation\\reports\\nexus-report\\screenshots\\TC-GENERIC_05f0c3_timedOut_1.png",
+        "relativePath": "screenshots/TC-GENERIC_05f0c3_timedOut_1.png",
+        "base64": null
+      },
+      {
+        "name": "error-context",
+        "contentType": "text/markdown",
+        "path": "D:\\BBPS_E2E_Automation\\test-results\\COU_Reports-COU-Reports---Maker-Periodic-Reports-with-Month-BOB-BBPS\\error-context.md",
+        "relativePath": null,
+        "base64": null
+      }
+    ],
+    "primaryScreenshot": "screenshots/TC-GENERIC_05f0c3_timedOut_1.png",
+    "location": "COU_Reports.spec.js:30"
+  },
+  {
+    "id": "758cfb3308aa3651c7cb-1c4e6f75ff6b2eef21a8",
+    "key": " › BOB BBPS › BOU_Reports.spec.js › BOU Reports - Checker › Custom Reports",
+    "file": "tests\\BOU_Reports.spec.js",
+    "executedAt": "2026-10-09T11:28:34.546Z",
+    "tcId": "TC-GENERIC",
+    "title": "Custom Reports",
+    "module": "BOU Reports",
+    "portal": "Checker",
+    "userName": "SANGRAMCHECKERUAT",
+    "status": "failed",
+    "knownDefect": false,
+    "durationMs": 23707,
+    "error": {
+      "message": "TimeoutError: page.waitForURL: Timeout 15000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================",
+      "stack": "TimeoutError: page.waitForURL: Timeout 15000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================\n    at setupAuth (D:\\BBPS_E2E_Automation\\Pages\\Hooks.js:142:16)\n    at D:\\BBPS_E2E_Automation\\tests\\BOU_Reports.spec.js:13:13"
+    },
+    "steps": [
+      {
+        "title": "Executed automated workflow steps",
+        "durationMs": 23707,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "❌ FAILED: TimeoutError: page.waitForURL: Timeout 15000ms exceeded.",
+        "durationMs": 0,
+        "error": "TimeoutError: page.waitForURL: Timeout 15000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================",
+        "technicalProof": []
+      }
+    ],
+    "attachments": [
+      {
+        "name": "screenshot",
+        "contentType": "image/png",
+        "path": "D:\\BBPS_E2E_Automation\\reports\\nexus-report\\screenshots\\TC-GENERIC_7d603e_failed_1.png",
+        "relativePath": "screenshots/TC-GENERIC_7d603e_failed_1.png",
+        "base64": null
+      },
+      {
+        "name": "error-context",
+        "contentType": "text/markdown",
+        "path": "D:\\BBPS_E2E_Automation\\test-results\\BOU_Reports-BOU-Reports---Checker-Custom-Reports-BOB-BBPS\\error-context.md",
+        "relativePath": null,
+        "base64": null
+      }
+    ],
+    "primaryScreenshot": "screenshots/TC-GENERIC_7d603e_failed_1.png",
+    "location": "BOU_Reports.spec.js:16"
+  },
+  {
+    "id": "f58d08b28dfcae8b40a9-e179907e90da35da40f7",
+    "key": " › BOB BBPS › COU_Reports.spec.js › COU Reports - Maker › Combination Search",
+    "file": "tests\\COU_Reports.spec.js",
+    "executedAt": "2026-10-09T11:28:54.803Z",
+    "tcId": "TC-GENERIC",
+    "title": "Combination Search",
+    "module": "COU Reports",
+    "portal": "Maker",
+    "userName": "SHILPAMAKER",
+    "status": "timedOut",
+    "knownDefect": false,
+    "durationMs": 30258,
+    "error": {
+      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+      "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+    },
+    "steps": [
+      {
+        "title": "Executed automated workflow steps",
+        "durationMs": 30258,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "❌ FAILED: \u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+        "durationMs": 0,
+        "error": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+        "technicalProof": []
+      }
+    ],
+    "attachments": [
+      {
+        "name": "screenshot",
+        "contentType": "image/png",
+        "path": "D:\\BBPS_E2E_Automation\\reports\\nexus-report\\screenshots\\TC-GENERIC_673fa8_timedOut_1.png",
+        "relativePath": "screenshots/TC-GENERIC_673fa8_timedOut_1.png",
+        "base64": null
+      },
+      {
+        "name": "error-context",
+        "contentType": "text/markdown",
+        "path": "D:\\BBPS_E2E_Automation\\test-results\\COU_Reports-COU-Reports---Maker-Combination-Search-BOB-BBPS\\error-context.md",
+        "relativePath": null,
+        "base64": null
+      }
+    ],
+    "primaryScreenshot": "screenshots/TC-GENERIC_673fa8_timedOut_1.png",
+    "location": "COU_Reports.spec.js:38"
+  },
+  {
+    "id": "64159d6fba74027d80b3-4a2143b06c67c1838cda",
+    "key": " › BOB BBPS › BouReconciliation.spec.js › BOU Reconciliation - Checker › Dates Reconciliation",
+    "file": "tests\\BouReconciliation.spec.js",
+    "executedAt": "2026-10-09T11:28:54.824Z",
+    "tcId": "TC-GENERIC",
+    "title": "Dates Reconciliation",
+    "module": "BOU Reconciliation",
+    "portal": "Checker",
+    "userName": "SANGRAMCHECKERUAT",
+    "status": "timedOut",
+    "knownDefect": false,
+    "durationMs": 30456,
+    "error": {
+      "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+      "stack": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n    at D:\\BBPS_E2E_Automation\\tests\\BouReconciliation.spec.js:7:14"
+    },
+    "steps": [
+      {
+        "title": "Executed automated workflow steps",
+        "durationMs": 30456,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "❌ FAILED: \u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+        "durationMs": 0,
+        "error": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+        "technicalProof": []
+      }
+    ],
+    "attachments": [
+      {
+        "name": "screenshot",
+        "contentType": "image/png",
+        "path": "D:\\BBPS_E2E_Automation\\reports\\nexus-report\\screenshots\\TC-GENERIC_c03722_timedOut_1.png",
+        "relativePath": "screenshots/TC-GENERIC_c03722_timedOut_1.png",
+        "base64": null
+      },
+      {
+        "name": "error-context",
+        "contentType": "text/markdown",
+        "path": "D:\\BBPS_E2E_Automation\\test-results\\BouReconciliation-BOU-Reco-669a0-hecker-Dates-Reconciliation-BOB-BBPS\\error-context.md",
+        "relativePath": null,
+        "base64": null
+      }
+    ],
+    "primaryScreenshot": "screenshots/TC-GENERIC_c03722_timedOut_1.png",
+    "location": "BouReconciliation.spec.js:11"
+  },
+  {
+    "id": "758cfb3308aa3651c7cb-9a0fb34e7674a38fc9c0",
+    "key": " › BOB BBPS › BOU_Reports.spec.js › BOU Reports - Checker › Periodic Reports",
+    "file": "tests\\BOU_Reports.spec.js",
+    "executedAt": "2026-10-09T11:29:16.438Z",
+    "tcId": "TC-GENERIC",
+    "title": "Periodic Reports",
+    "module": "BOU Reports",
+    "portal": "Checker",
+    "userName": "SANGRAMCHECKERUAT",
+    "status": "failed",
+    "knownDefect": false,
+    "durationMs": 22147,
+    "error": {
+      "message": "TimeoutError: page.waitForURL: Timeout 15000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================",
+      "stack": "TimeoutError: page.waitForURL: Timeout 15000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================\n    at setupAuth (D:\\BBPS_E2E_Automation\\Pages\\Hooks.js:142:16)\n    at D:\\BBPS_E2E_Automation\\tests\\BOU_Reports.spec.js:13:13"
+    },
+    "steps": [
+      {
+        "title": "Executed automated workflow steps",
+        "durationMs": 22147,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "❌ FAILED: TimeoutError: page.waitForURL: Timeout 15000ms exceeded.",
+        "durationMs": 0,
+        "error": "TimeoutError: page.waitForURL: Timeout 15000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================",
+        "technicalProof": []
+      }
+    ],
+    "attachments": [
+      {
+        "name": "screenshot",
+        "contentType": "image/png",
+        "path": "D:\\BBPS_E2E_Automation\\reports\\nexus-report\\screenshots\\TC-GENERIC_c8326a_failed_1.png",
+        "relativePath": "screenshots/TC-GENERIC_c8326a_failed_1.png",
+        "base64": null
+      },
+      {
+        "name": "error-context",
+        "contentType": "text/markdown",
+        "path": "D:\\BBPS_E2E_Automation\\test-results\\BOU_Reports-BOU-Reports---Checker-Periodic-Reports-BOB-BBPS\\error-context.md",
+        "relativePath": null,
+        "base64": null
+      }
+    ],
+    "primaryScreenshot": "screenshots/TC-GENERIC_c8326a_failed_1.png",
+    "location": "BOU_Reports.spec.js:28"
+  },
+  {
+    "id": "64159d6fba74027d80b3-e53fb1df6e9c3450c4a8",
+    "key": " › BOB BBPS › BouReconciliation.spec.js › BOU Reconciliation - Checker › File Upload Reconciliation",
+    "file": "tests\\BouReconciliation.spec.js",
+    "executedAt": "2026-10-09T11:29:40.159Z",
+    "tcId": "TC-GENERIC",
+    "title": "File Upload Reconciliation",
+    "module": "BOU Reconciliation",
+    "portal": "Checker",
+    "userName": "SANGRAMCHECKERUAT",
+    "status": "timedOut",
+    "knownDefect": false,
+    "durationMs": 30478,
+    "error": {
+      "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+      "stack": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n    at D:\\BBPS_E2E_Automation\\tests\\BouReconciliation.spec.js:7:14"
+    },
+    "steps": [
+      {
+        "title": "Executed automated workflow steps",
+        "durationMs": 30478,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "❌ FAILED: \u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+        "durationMs": 0,
+        "error": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+        "technicalProof": []
+      }
+    ],
+    "attachments": [
+      {
+        "name": "screenshot",
+        "contentType": "image/png",
+        "path": "D:\\BBPS_E2E_Automation\\reports\\nexus-report\\screenshots\\TC-GENERIC_e37083_timedOut_1.png",
+        "relativePath": "screenshots/TC-GENERIC_e37083_timedOut_1.png",
+        "base64": null
+      },
+      {
+        "name": "error-context",
+        "contentType": "text/markdown",
+        "path": "D:\\BBPS_E2E_Automation\\test-results\\BouReconciliation-BOU-Reco-ac17b--File-Upload-Reconciliation-BOB-BBPS\\error-context.md",
+        "relativePath": null,
+        "base64": null
+      }
+    ],
+    "primaryScreenshot": "screenshots/TC-GENERIC_e37083_timedOut_1.png",
+    "location": "BouReconciliation.spec.js:17"
+  },
+  {
+    "id": "f58d08b28dfcae8b40a9-713c53de98e9bfd1d6ea",
+    "key": " › BOB BBPS › COU_Reports.spec.js › COU Reports - Checker › Custom Reports",
+    "file": "tests\\COU_Reports.spec.js",
+    "executedAt": "2026-10-09T11:29:40.704Z",
+    "tcId": "TC-GENERIC",
+    "title": "Custom Reports",
+    "module": "COU Reports",
+    "portal": "Checker",
+    "userName": "SANGRAMCHECKERUAT",
+    "status": "timedOut",
+    "knownDefect": false,
+    "durationMs": 30571,
+    "error": {
+      "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+      "stack": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n    at D:\\BBPS_E2E_Automation\\tests\\COU_Reports.spec.js:9:10"
+    },
+    "steps": [
+      {
+        "title": "Executed automated workflow steps",
+        "durationMs": 30571,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "❌ FAILED: \u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+        "durationMs": 0,
+        "error": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+        "technicalProof": []
+      }
+    ],
+    "attachments": [
+      {
+        "name": "screenshot",
+        "contentType": "image/png",
+        "path": "D:\\BBPS_E2E_Automation\\reports\\nexus-report\\screenshots\\TC-GENERIC_7d603e_timedOut_1.png",
+        "relativePath": "screenshots/TC-GENERIC_7d603e_timedOut_1.png",
+        "base64": null
+      },
+      {
+        "name": "error-context",
+        "contentType": "text/markdown",
+        "path": "D:\\BBPS_E2E_Automation\\test-results\\COU_Reports-COU-Reports---Checker-Custom-Reports-BOB-BBPS\\error-context.md",
+        "relativePath": null,
+        "base64": null
+      }
+    ],
+    "primaryScreenshot": "screenshots/TC-GENERIC_7d603e_timedOut_1.png",
+    "location": "COU_Reports.spec.js:13"
+  },
+  {
+    "id": "758cfb3308aa3651c7cb-37a598ac59904c40bcb0",
+    "key": " › BOB BBPS › BOU_Reports.spec.js › BOU Reports - Checker › Combination Search",
+    "file": "tests\\BOU_Reports.spec.js",
+    "executedAt": "2026-10-09T11:29:47.590Z",
+    "tcId": "TC-GENERIC",
+    "title": "Combination Search",
+    "module": "BOU Reports",
+    "portal": "Checker",
+    "userName": "SANGRAMCHECKERUAT",
+    "status": "failed",
+    "knownDefect": false,
+    "durationMs": 22821,
+    "error": {
+      "message": "TimeoutError: page.waitForURL: Timeout 15000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================",
+      "stack": "TimeoutError: page.waitForURL: Timeout 15000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================\n    at setupAuth (D:\\BBPS_E2E_Automation\\Pages\\Hooks.js:142:16)\n    at D:\\BBPS_E2E_Automation\\tests\\BOU_Reports.spec.js:13:13"
+    },
+    "steps": [
+      {
+        "title": "Executed automated workflow steps",
+        "durationMs": 22821,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "❌ FAILED: TimeoutError: page.waitForURL: Timeout 15000ms exceeded.",
+        "durationMs": 0,
+        "error": "TimeoutError: page.waitForURL: Timeout 15000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================",
+        "technicalProof": []
+      }
+    ],
+    "attachments": [
+      {
+        "name": "screenshot",
+        "contentType": "image/png",
+        "path": "D:\\BBPS_E2E_Automation\\reports\\nexus-report\\screenshots\\TC-GENERIC_673fa8_failed_1.png",
+        "relativePath": "screenshots/TC-GENERIC_673fa8_failed_1.png",
+        "base64": null
+      },
+      {
+        "name": "error-context",
+        "contentType": "text/markdown",
+        "path": "D:\\BBPS_E2E_Automation\\test-results\\BOU_Reports-BOU-Reports---Checker-Combination-Search-BOB-BBPS\\error-context.md",
+        "relativePath": null,
+        "base64": null
+      }
+    ],
+    "primaryScreenshot": "screenshots/TC-GENERIC_673fa8_failed_1.png",
+    "location": "BOU_Reports.spec.js:41"
+  },
+  {
+    "id": "f58d08b28dfcae8b40a9-a63b68e25ad88ed19160",
+    "key": " › BOB BBPS › COU_Reports.spec.js › COU Reports - Checker › Periodic Reports with Date",
+    "file": "tests\\COU_Reports.spec.js",
+    "executedAt": "2026-10-09T11:30:19.415Z",
+    "tcId": "TC-GENERIC",
+    "title": "Periodic Reports with Date",
+    "module": "COU Reports",
+    "portal": "Checker",
+    "userName": "SANGRAMCHECKERUAT",
+    "status": "failed",
+    "knownDefect": false,
+    "durationMs": 26209,
+    "error": {
+      "message": "TimeoutError: page.waitForURL: Timeout 15000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================",
+      "stack": "TimeoutError: page.waitForURL: Timeout 15000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================\n    at setupAuth (D:\\BBPS_E2E_Automation\\Pages\\Hooks.js:142:16)\n    at D:\\BBPS_E2E_Automation\\tests\\COU_Reports.spec.js:10:9"
+    },
+    "steps": [
+      {
+        "title": "Executed automated workflow steps",
+        "durationMs": 26209,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "❌ FAILED: TimeoutError: page.waitForURL: Timeout 15000ms exceeded.",
+        "durationMs": 0,
+        "error": "TimeoutError: page.waitForURL: Timeout 15000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================",
+        "technicalProof": []
+      }
+    ],
+    "attachments": [
+      {
+        "name": "screenshot",
+        "contentType": "image/png",
+        "path": "D:\\BBPS_E2E_Automation\\reports\\nexus-report\\screenshots\\TC-GENERIC_535568_failed_1.png",
+        "relativePath": "screenshots/TC-GENERIC_535568_failed_1.png",
+        "base64": null
+      },
+      {
+        "name": "error-context",
+        "contentType": "text/markdown",
+        "path": "D:\\BBPS_E2E_Automation\\test-results\\COU_Reports-COU-Reports---Checker-Periodic-Reports-with-Date-BOB-BBPS\\error-context.md",
+        "relativePath": null,
+        "base64": null
+      }
+    ],
+    "primaryScreenshot": "screenshots/TC-GENERIC_535568_failed_1.png",
+    "location": "COU_Reports.spec.js:22"
+  },
+  {
+    "id": "64159d6fba74027d80b3-5a2856d1cb3de2524142",
+    "key": " › BOB BBPS › BouReconciliation.spec.js › BOU Reconciliation - Checker › Reconciliation History",
+    "file": "tests\\BouReconciliation.spec.js",
+    "executedAt": "2026-10-09T11:30:23.767Z",
+    "tcId": "TC-GENERIC",
+    "title": "Reconciliation History",
+    "module": "BOU Reconciliation",
+    "portal": "Checker",
+    "userName": "SANGRAMCHECKERUAT",
+    "status": "timedOut",
+    "knownDefect": false,
+    "durationMs": 30389,
+    "error": {
+      "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+      "stack": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n    at D:\\BBPS_E2E_Automation\\tests\\BouReconciliation.spec.js:7:14"
+    },
+    "steps": [
+      {
+        "title": "Executed automated workflow steps",
+        "durationMs": 30389,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "❌ FAILED: \u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+        "durationMs": 0,
+        "error": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+        "technicalProof": []
+      }
+    ],
+    "attachments": [
+      {
+        "name": "screenshot",
+        "contentType": "image/png",
+        "path": "D:\\BBPS_E2E_Automation\\reports\\nexus-report\\screenshots\\TC-GENERIC_46817e_timedOut_1.png",
+        "relativePath": "screenshots/TC-GENERIC_46817e_timedOut_1.png",
+        "base64": null
+      },
+      {
+        "name": "error-context",
+        "contentType": "text/markdown",
+        "path": "D:\\BBPS_E2E_Automation\\test-results\\BouReconciliation-BOU-Reco-2c377-cker-Reconciliation-History-BOB-BBPS\\error-context.md",
+        "relativePath": null,
+        "base64": null
+      }
+    ],
+    "primaryScreenshot": "screenshots/TC-GENERIC_46817e_timedOut_1.png",
+    "location": "BouReconciliation.spec.js:25"
+  },
+  {
+    "id": "758cfb3308aa3651c7cb-db294b989054a5330566",
+    "key": " › BOB BBPS › BOU_Reports.spec.js › BOU Reports - Biller › Custom Reports",
+    "file": "tests\\BOU_Reports.spec.js",
+    "executedAt": "2026-10-09T11:30:42.058Z",
+    "tcId": "TC-GENERIC",
+    "title": "Custom Reports",
+    "module": "BOU Reports",
+    "portal": "Biller",
+    "userName": "DEEPIKA2341",
+    "status": "timedOut",
+    "knownDefect": false,
+    "durationMs": 30304,
+    "error": {
+      "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+      "stack": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n    at D:\\BBPS_E2E_Automation\\tests\\BOU_Reports.spec.js:12:14"
+    },
+    "steps": [
+      {
+        "title": "Executed automated workflow steps",
+        "durationMs": 30304,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "❌ FAILED: \u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+        "durationMs": 0,
+        "error": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+        "technicalProof": []
+      }
+    ],
+    "attachments": [
+      {
+        "name": "screenshot",
+        "contentType": "image/png",
+        "path": "D:\\BBPS_E2E_Automation\\reports\\nexus-report\\screenshots\\TC-GENERIC_7d603e_timedOut_1.png",
+        "relativePath": "screenshots/TC-GENERIC_7d603e_timedOut_1.png",
+        "base64": null
+      },
+      {
+        "name": "error-context",
+        "contentType": "text/markdown",
+        "path": "D:\\BBPS_E2E_Automation\\test-results\\BOU_Reports-BOU-Reports---Biller-Custom-Reports-BOB-BBPS\\error-context.md",
+        "relativePath": null,
+        "base64": null
+      }
+    ],
+    "primaryScreenshot": "screenshots/TC-GENERIC_7d603e_timedOut_1.png",
+    "location": "BOU_Reports.spec.js:16"
+  },
+  {
+    "id": "f58d08b28dfcae8b40a9-7f99fe81ae0688d68a98",
+    "key": " › BOB BBPS › COU_Reports.spec.js › COU Reports - Checker › Periodic Reports with Month",
+    "file": "tests\\COU_Reports.spec.js",
+    "executedAt": "2026-10-09T11:31:00.983Z",
+    "tcId": "TC-GENERIC",
+    "title": "Periodic Reports with Month",
+    "module": "COU Reports",
+    "portal": "Checker",
+    "userName": "SANGRAMCHECKERUAT",
+    "status": "failed",
+    "knownDefect": false,
+    "durationMs": 22978,
+    "error": {
+      "message": "TimeoutError: page.waitForURL: Timeout 15000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================",
+      "stack": "TimeoutError: page.waitForURL: Timeout 15000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================\n    at setupAuth (D:\\BBPS_E2E_Automation\\Pages\\Hooks.js:142:16)\n    at D:\\BBPS_E2E_Automation\\tests\\COU_Reports.spec.js:10:9"
+    },
+    "steps": [
+      {
+        "title": "Executed automated workflow steps",
+        "durationMs": 22978,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "❌ FAILED: TimeoutError: page.waitForURL: Timeout 15000ms exceeded.",
+        "durationMs": 0,
+        "error": "TimeoutError: page.waitForURL: Timeout 15000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================",
+        "technicalProof": []
+      }
+    ],
+    "attachments": [
+      {
+        "name": "screenshot",
+        "contentType": "image/png",
+        "path": "D:\\BBPS_E2E_Automation\\reports\\nexus-report\\screenshots\\TC-GENERIC_05f0c3_failed_1.png",
+        "relativePath": "screenshots/TC-GENERIC_05f0c3_failed_1.png",
+        "base64": null
+      },
+      {
+        "name": "error-context",
+        "contentType": "text/markdown",
+        "path": "D:\\BBPS_E2E_Automation\\test-results\\COU_Reports-COU-Reports----5a4d6-Periodic-Reports-with-Month-BOB-BBPS\\error-context.md",
+        "relativePath": null,
+        "base64": null
+      }
+    ],
+    "primaryScreenshot": "screenshots/TC-GENERIC_05f0c3_failed_1.png",
+    "location": "COU_Reports.spec.js:30"
+  },
+  {
+    "id": "628a3037ab7df042c56e-a63968ba80e5c1ffc6be",
+    "key": " › BOB BBPS › couReconciliation.spec.js › COU Reconciliation - Maker › COU file Upload Reconciliation",
+    "file": "tests\\couReconciliation.spec.js",
+    "executedAt": "2026-10-09T11:31:05.860Z",
+    "tcId": "TC-GENERIC",
+    "title": "COU file Upload Reconciliation",
+    "module": "COU Reconciliation",
+    "portal": "Maker",
+    "userName": "SHILPAMAKER",
+    "status": "timedOut",
+    "knownDefect": false,
+    "durationMs": 30209,
+    "error": {
+      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+      "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+    },
+    "steps": [
+      {
+        "title": "Executed automated workflow steps",
+        "durationMs": 30209,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "❌ FAILED: \u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+        "durationMs": 0,
+        "error": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+        "technicalProof": []
+      }
+    ],
+    "attachments": [
+      {
+        "name": "screenshot",
+        "contentType": "image/png",
+        "path": "D:\\BBPS_E2E_Automation\\reports\\nexus-report\\screenshots\\TC-GENERIC_79a71c_timedOut_1.png",
+        "relativePath": "screenshots/TC-GENERIC_79a71c_timedOut_1.png",
+        "base64": null
+      },
+      {
+        "name": "error-context",
+        "contentType": "text/markdown",
+        "path": "D:\\BBPS_E2E_Automation\\test-results\\couReconciliation-COU-Reco-e3d05--file-Upload-Reconciliation-BOB-BBPS\\error-context.md",
+        "relativePath": null,
+        "base64": null
+      }
+    ],
+    "primaryScreenshot": "screenshots/TC-GENERIC_79a71c_timedOut_1.png",
+    "location": "couReconciliation.spec.js:11"
+  },
+  {
+    "id": "758cfb3308aa3651c7cb-0e11d27a40ff7ff85d5b",
+    "key": " › BOB BBPS › BOU_Reports.spec.js › BOU Reports - Biller › Periodic Reports",
+    "file": "tests\\BOU_Reports.spec.js",
+    "executedAt": "2026-10-09T11:31:27.880Z",
+    "tcId": "TC-GENERIC",
+    "title": "Periodic Reports",
+    "module": "BOU Reports",
+    "portal": "Biller",
+    "userName": "DEEPIKA2341",
+    "status": "timedOut",
+    "knownDefect": false,
+    "durationMs": 30403,
+    "error": {
+      "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+      "stack": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n    at D:\\BBPS_E2E_Automation\\tests\\BOU_Reports.spec.js:12:14"
+    },
+    "steps": [
+      {
+        "title": "Executed automated workflow steps",
+        "durationMs": 30403,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "❌ FAILED: \u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+        "durationMs": 0,
+        "error": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+        "technicalProof": []
+      }
+    ],
+    "attachments": [
+      {
+        "name": "screenshot",
+        "contentType": "image/png",
+        "path": "D:\\BBPS_E2E_Automation\\reports\\nexus-report\\screenshots\\TC-GENERIC_c8326a_timedOut_1.png",
+        "relativePath": "screenshots/TC-GENERIC_c8326a_timedOut_1.png",
+        "base64": null
+      },
+      {
+        "name": "error-context",
+        "contentType": "text/markdown",
+        "path": "D:\\BBPS_E2E_Automation\\test-results\\BOU_Reports-BOU-Reports---Biller-Periodic-Reports-BOB-BBPS\\error-context.md",
+        "relativePath": null,
+        "base64": null
+      }
+    ],
+    "primaryScreenshot": "screenshots/TC-GENERIC_c8326a_timedOut_1.png",
+    "location": "BOU_Reports.spec.js:28"
+  },
+  {
+    "id": "f58d08b28dfcae8b40a9-3807ebe2304645dded45",
+    "key": " › BOB BBPS › COU_Reports.spec.js › COU Reports - Checker › Combination Search",
+    "file": "tests\\COU_Reports.spec.js",
+    "executedAt": "2026-10-09T11:31:33.649Z",
+    "tcId": "TC-GENERIC",
+    "title": "Combination Search",
+    "module": "COU Reports",
+    "portal": "Checker",
+    "userName": "SANGRAMCHECKERUAT",
+    "status": "failed",
+    "knownDefect": false,
+    "durationMs": 23238,
+    "error": {
+      "message": "TimeoutError: page.waitForURL: Timeout 15000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================",
+      "stack": "TimeoutError: page.waitForURL: Timeout 15000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================\n    at setupAuth (D:\\BBPS_E2E_Automation\\Pages\\Hooks.js:142:16)\n    at D:\\BBPS_E2E_Automation\\tests\\COU_Reports.spec.js:10:9"
+    },
+    "steps": [
+      {
+        "title": "Executed automated workflow steps",
+        "durationMs": 23238,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "❌ FAILED: TimeoutError: page.waitForURL: Timeout 15000ms exceeded.",
+        "durationMs": 0,
+        "error": "TimeoutError: page.waitForURL: Timeout 15000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================",
+        "technicalProof": []
+      }
+    ],
+    "attachments": [
+      {
+        "name": "screenshot",
+        "contentType": "image/png",
+        "path": "D:\\BBPS_E2E_Automation\\reports\\nexus-report\\screenshots\\TC-GENERIC_673fa8_failed_1.png",
+        "relativePath": "screenshots/TC-GENERIC_673fa8_failed_1.png",
+        "base64": null
+      },
+      {
+        "name": "error-context",
+        "contentType": "text/markdown",
+        "path": "D:\\BBPS_E2E_Automation\\test-results\\COU_Reports-COU-Reports---Checker-Combination-Search-BOB-BBPS\\error-context.md",
+        "relativePath": null,
+        "base64": null
+      }
+    ],
+    "primaryScreenshot": "screenshots/TC-GENERIC_673fa8_failed_1.png",
+    "location": "COU_Reports.spec.js:38"
+  },
+  {
+    "id": "628a3037ab7df042c56e-fdb6e36b6f0b47938059",
+    "key": " › BOB BBPS › couReconciliation.spec.js › COU Reconciliation - Maker › COU Reconciliation History",
+    "file": "tests\\couReconciliation.spec.js",
+    "executedAt": "2026-10-09T11:31:54.718Z",
+    "tcId": "TC-GENERIC",
+    "title": "COU Reconciliation History",
+    "module": "COU Reconciliation",
+    "portal": "Maker",
+    "userName": "SHILPAMAKER",
+    "status": "failed",
+    "knownDefect": false,
+    "durationMs": 23082,
+    "error": {
+      "message": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByText('Reconciliation', { exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <span class=\"MuiBox-root css-uko8o2\">Reconciliation</span>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 100ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m  - element was detached from the DOM, retrying\u001b[22m\n",
+      "stack": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByText('Reconciliation', { exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <span class=\"MuiBox-root css-uko8o2\">Reconciliation</span>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 100ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m  - element was detached from the DOM, retrying\u001b[22m\n\n    at ReconciliationPage.openCOUReconciliationMenu (D:\\BBPS_E2E_Automation\\Pages\\ReconciliationPage.js:51:39)\n    at D:\\BBPS_E2E_Automation\\tests\\couReconciliation.spec.js:22:9"
+    },
+    "steps": [
+      {
+        "title": "Executed automated workflow steps",
+        "durationMs": 23082,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "❌ FAILED: Error: locator.click: Target page, context or browser has been closed",
+        "durationMs": 0,
+        "error": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByText('Reconciliation', { exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <span class=\"MuiBox-root css-uko8o2\">Reconciliation</span>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 100ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m  - element was detached from the DOM, retrying\u001b[22m\n",
+        "technicalProof": []
+      }
+    ],
+    "attachments": [
+      {
+        "name": "error-context",
+        "contentType": "text/markdown",
+        "path": "D:\\BBPS_E2E_Automation\\test-results\\couReconciliation-COU-Reco-142bd--COU-Reconciliation-History-BOB-BBPS\\error-context.md",
+        "relativePath": null,
+        "base64": null
+      }
+    ],
+    "primaryScreenshot": null,
+    "location": "couReconciliation.spec.js:20"
+  },
+  {
+    "id": "758cfb3308aa3651c7cb-50a110aad08319cb9335",
+    "key": " › BOB BBPS › BOU_Reports.spec.js › BOU Reports - Biller › Combination Search",
+    "file": "tests\\BOU_Reports.spec.js",
+    "executedAt": "2026-10-09T11:32:13.035Z",
+    "tcId": "TC-GENERIC",
+    "title": "Combination Search",
+    "module": "BOU Reports",
+    "portal": "Biller",
+    "userName": "DEEPIKA2341",
+    "status": "timedOut",
+    "knownDefect": false,
+    "durationMs": 30273,
+    "error": {
+      "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+      "stack": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n    at D:\\BBPS_E2E_Automation\\tests\\BOU_Reports.spec.js:12:14"
+    },
+    "steps": [
+      {
+        "title": "Executed automated workflow steps",
+        "durationMs": 30273,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "❌ FAILED: \u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+        "durationMs": 0,
+        "error": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+        "technicalProof": []
+      }
+    ],
+    "attachments": [
+      {
+        "name": "screenshot",
+        "contentType": "image/png",
+        "path": "D:\\BBPS_E2E_Automation\\reports\\nexus-report\\screenshots\\TC-GENERIC_673fa8_timedOut_1.png",
+        "relativePath": "screenshots/TC-GENERIC_673fa8_timedOut_1.png",
+        "base64": null
+      },
+      {
+        "name": "error-context",
+        "contentType": "text/markdown",
+        "path": "D:\\BBPS_E2E_Automation\\test-results\\BOU_Reports-BOU-Reports---Biller-Combination-Search-BOB-BBPS\\error-context.md",
+        "relativePath": null,
+        "base64": null
+      }
+    ],
+    "primaryScreenshot": "screenshots/TC-GENERIC_673fa8_timedOut_1.png",
+    "location": "BOU_Reports.spec.js:41"
+  },
+  {
+    "id": "07c4e05742be389ff296-05a471f654aeca9cbd78",
+    "key": " › BOB BBPS › CreateBiller.spec.js › Biller Creation › Create Biller - Valid Details",
+    "file": "tests\\CreateBiller.spec.js",
+    "executedAt": "2026-10-09T11:32:28.810Z",
+    "tcId": "TC-GENERIC",
+    "title": "Create Biller - Valid Details",
+    "module": "Biller Creation",
+    "portal": "Maker",
+    "userName": "SHILPAMAKER",
+    "status": "timedOut",
+    "knownDefect": false,
+    "durationMs": 30304,
+    "error": {
+      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+      "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+    },
+    "steps": [
+      {
+        "title": "Executed automated workflow steps",
+        "durationMs": 30304,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "❌ FAILED: \u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+        "durationMs": 0,
+        "error": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+        "technicalProof": []
+      }
+    ],
+    "attachments": [
+      {
+        "name": "screenshot",
+        "contentType": "image/png",
+        "path": "D:\\BBPS_E2E_Automation\\reports\\nexus-report\\screenshots\\TC-GENERIC_6e16b3_timedOut_1.png",
+        "relativePath": "screenshots/TC-GENERIC_6e16b3_timedOut_1.png",
+        "base64": null
+      },
+      {
+        "name": "error-context",
+        "contentType": "text/markdown",
+        "path": "D:\\BBPS_E2E_Automation\\test-results\\CreateBiller-Biller-Creation-Create-Biller---Valid-Details-BOB-BBPS\\error-context.md",
+        "relativePath": null,
+        "base64": null
+      }
+    ],
+    "primaryScreenshot": "screenshots/TC-GENERIC_6e16b3_timedOut_1.png",
+    "location": "CreateBiller.spec.js:14"
+  },
+  {
+    "id": "628a3037ab7df042c56e-2e43432727938de777da",
+    "key": " › BOB BBPS › couReconciliation.spec.js › COU Reconciliation - Checker › COU file Upload Reconciliation",
+    "file": "tests\\couReconciliation.spec.js",
+    "executedAt": "2026-10-09T11:32:30.002Z",
+    "tcId": "TC-GENERIC",
+    "title": "COU file Upload Reconciliation",
+    "module": "COU Reconciliation",
+    "portal": "Checker",
+    "userName": "SANGRAMCHECKERUAT",
+    "status": "failed",
+    "knownDefect": false,
+    "durationMs": 15793,
+    "error": {
+      "message": "Error: page.waitForURL: Target page, context or browser has been closed\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================",
+      "stack": "Error: page.waitForURL: Target page, context or browser has been closed\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================\n    at setupAuth (D:\\BBPS_E2E_Automation\\Pages\\Hooks.js:142:16)\n    at D:\\BBPS_E2E_Automation\\tests\\couReconciliation.spec.js:8:13"
+    },
+    "steps": [
+      {
+        "title": "Executed automated workflow steps",
+        "durationMs": 15793,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "❌ FAILED: Error: page.waitForURL: Target page, context or browser has been closed",
+        "durationMs": 0,
+        "error": "Error: page.waitForURL: Target page, context or browser has been closed\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================",
+        "technicalProof": []
+      }
+    ],
+    "attachments": [
+      {
+        "name": "error-context",
+        "contentType": "text/markdown",
+        "path": "D:\\BBPS_E2E_Automation\\test-results\\couReconciliation-COU-Reco-4bd49--file-Upload-Reconciliation-BOB-BBPS\\error-context.md",
+        "relativePath": null,
+        "base64": null
+      }
+    ],
+    "primaryScreenshot": null,
+    "location": "couReconciliation.spec.js:11"
+  },
+  {
+    "id": "70374577f7de313103f1-c576499c8d89a28df5f2",
+    "key": " › BOB BBPS › feeConfiguration.spec.js › Biller Onboarding › Fee Configuration",
+    "file": "tests\\feeConfiguration.spec.js",
+    "executedAt": "2026-10-09T11:32:59.829Z",
+    "tcId": "TC-GENERIC",
+    "title": "Fee Configuration",
+    "module": "Biller Onboarding",
+    "portal": "Biller",
+    "userName": "DEEPIKA2341",
+    "status": "timedOut",
+    "knownDefect": false,
+    "durationMs": 30329,
+    "error": {
+      "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+      "stack": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n    at D:\\BBPS_E2E_Automation\\tests\\feeConfiguration.spec.js:9:10"
+    },
+    "steps": [
+      {
+        "title": "Executed automated workflow steps",
+        "durationMs": 30329,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "❌ FAILED: \u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+        "durationMs": 0,
+        "error": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+        "technicalProof": []
+      }
+    ],
+    "attachments": [
+      {
+        "name": "screenshot",
+        "contentType": "image/png",
+        "path": "D:\\BBPS_E2E_Automation\\reports\\nexus-report\\screenshots\\TC-GENERIC_1ea91a_timedOut_1.png",
+        "relativePath": "screenshots/TC-GENERIC_1ea91a_timedOut_1.png",
+        "base64": null
+      },
+      {
+        "name": "error-context",
+        "contentType": "text/markdown",
+        "path": "D:\\BBPS_E2E_Automation\\test-results\\feeConfiguration-Biller-Onboarding-Fee-Configuration-BOB-BBPS\\error-context.md",
+        "relativePath": null,
+        "base64": null
+      }
+    ],
+    "primaryScreenshot": "screenshots/TC-GENERIC_1ea91a_timedOut_1.png",
+    "location": "feeConfiguration.spec.js:14"
+  },
+  {
+    "id": "628a3037ab7df042c56e-1eb37f8e2f8fa1adcd4e",
+    "key": " › BOB BBPS › couReconciliation.spec.js › COU Reconciliation - Checker › COU Reconciliation History",
+    "file": "tests\\couReconciliation.spec.js",
+    "executedAt": "2026-10-09T11:33:00.007Z",
+    "tcId": "TC-GENERIC",
+    "title": "COU Reconciliation History",
+    "module": "COU Reconciliation",
+    "portal": "Checker",
+    "userName": "SANGRAMCHECKERUAT",
+    "status": "failed",
+    "knownDefect": false,
+    "durationMs": 13138,
+    "error": {
+      "message": "Error: page.waitForURL: Target page, context or browser has been closed\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================",
+      "stack": "Error: page.waitForURL: Target page, context or browser has been closed\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================\n    at setupAuth (D:\\BBPS_E2E_Automation\\Pages\\Hooks.js:142:16)\n    at D:\\BBPS_E2E_Automation\\tests\\couReconciliation.spec.js:8:13"
+    },
+    "steps": [
+      {
+        "title": "Executed automated workflow steps",
+        "durationMs": 13138,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "❌ FAILED: Error: page.waitForURL: Target page, context or browser has been closed",
+        "durationMs": 0,
+        "error": "Error: page.waitForURL: Target page, context or browser has been closed\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================",
+        "technicalProof": []
+      }
+    ],
+    "attachments": [
+      {
+        "name": "error-context",
+        "contentType": "text/markdown",
+        "path": "D:\\BBPS_E2E_Automation\\test-results\\couReconciliation-COU-Reco-29186--COU-Reconciliation-History-BOB-BBPS\\error-context.md",
+        "relativePath": null,
+        "base64": null
+      }
+    ],
+    "primaryScreenshot": null,
+    "location": "couReconciliation.spec.js:20"
+  }
+]

@@ -12,7 +12,7 @@ test.describe('Biller Onboarding', () => {
     });
 
 
-    test('Basic Details onboarding', async ({ page, onboardingPage }) => {
+    test('Biller Details onboarding', async ({ page, onboardingPage }) => {
 
         await onboardingPage.openBillerOnboarding();
         await onboardingPage.assertBasicDetailsInputsVisible();

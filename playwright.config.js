@@ -15,7 +15,15 @@ module.exports = defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: 3,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  reporter: [
+    ['list'],
+    [
+        './reporters/NexusHtmlReporter.js',
+        {
+            outputFolder: 'reports/nexus-report'
+        }
+    ]
+],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
@@ -25,9 +33,10 @@ module.exports = defineConfig({
     // storageState: './auth/maker.json',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'retain-on-failure',
+    trace: 'on-first-retry',
     permissions: ['geolocation'],
     geolocation: { latitude: 20.2961, longitude: 85.8245 },
+    screenshot: 'on',
     headless: true,
     // viewport: null,
     // launchOptions: {
@@ -38,7 +47,7 @@ module.exports = defineConfig({
   /* Configure projects for major browsers */
   projects: [
     {
-      name: 'chromium',
+      name: 'BOB BBPS',
       use: { ...devices['Desktop Chrome'] },
     },
 
