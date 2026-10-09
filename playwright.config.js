@@ -18,7 +18,7 @@ module.exports = defineConfig({
   reporter: [
     ['list'],
     [
-        './reporters/NexusHtmlReporter.js',
+        './Reporters/NexusHtmlReporter.js',
         {
             outputFolder: 'reports/nexus-report'
         }
