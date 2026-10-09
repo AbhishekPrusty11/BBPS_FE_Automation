@@ -46,7 +46,7 @@ const dashboardUrls = {
 async function setupAuth(page, role = 'Maker') {
 
     const dashboardUrl = dashboardUrls[role];
-    const user = envConfig.credentials[role];
+    const user = envConfig.STAG.credentials[role];
 
     if (!dashboardUrl) {
         throw new Error(`Dashboard URL not configured for role: ${role}`);

@@ -1,23 +1,46 @@
 require('dotenv').config();
 
 const envConfig = {
-    credentials: {
-        Maker: {
-            Username: process.env.MAKER_USERNAME,
-            Password: process.env.MAKER_PASSWORD,
-            Otp: process.env.MAKER_OTP
-        },
+    STAG: {
+        credentials: {
+            Maker: {
+                Username: process.env.STAG_MAKER_USERNAME,
+                Password: process.env.STAG_MAKER_PASSWORD,
+                Otp: process.env.STAG_MAKER_OTP
+            },
 
-        Biller: {
-            Username: process.env.BILLER_USERNAME,
-            Password: process.env.BILLER_PASSWORD,
-            Otp: process.env.BILLER_OTP
-        },
+            Biller: {
+                Username: process.env.STAG_BILLER_USERNAME,
+                Password: process.env.STAG_BILLER_PASSWORD,
+                Otp: process.env.STAG_BILLER_OTP
+            },
 
-        Checker: {
-            Username: process.env.CHECKER_USERNAME,
-            Password: process.env.CHECKER_PASSWORD,
-            Otp: process.env.CHECKER_OTP
+            Checker: {
+                Username: process.env.STAG_CHECKER_USERNAME,
+                Password: process.env.STAG_CHECKER_PASSWORD,
+                Otp: process.env.STAG_CHECKER_OTP
+            }
+        }
+    },
+    UAT:{
+        credentials: {
+            Maker: {
+                Username: process.env.UAT_MAKER_USERNAME,
+                Password: process.env.UAT_MAKER_PASSWORD,
+                Otp: process.env.UAT_MAKER_OTP
+            },
+
+            Biller: {
+                Username: process.env.UAT_BILLER_USERNAME,
+                Password: process.env.UAT_BILLER_PASSWORD,
+                Otp: process.env.UAT_BILLER_OTP
+            },
+
+            Checker: {
+                Username: process.env.UAT_CHECKER_USERNAME,
+                Password: process.env.UAT_CHECKER_PASSWORD,
+                Otp: process.env.UAT_CHECKER_OTP
+            }
         }
     }
 };
