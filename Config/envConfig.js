@@ -2,6 +2,7 @@ require('dotenv').config();
 
 const envConfig = {
     STAG: {
+        baseUrl: process.env.STAG_BASE_URL,
         credentials: {
             Maker: {
                 Username: process.env.STAG_MAKER_USERNAME,
@@ -23,6 +24,7 @@ const envConfig = {
         }
     },
     UAT:{
+        baseUrl: process.env.UAT_BASE_URL,
         credentials: {
             Maker: {
                 Username: process.env.UAT_MAKER_USERNAME,

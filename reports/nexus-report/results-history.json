@@ -475,41 +475,142 @@
     "id": "758cfb3308aa3651c7cb-b7b85af82c9a26d5a641",
     "key": " › BOB BBPS › BOU_Reports.spec.js › BOU Reports - Maker › Custom Reports",
     "file": "tests\\BOU_Reports.spec.js",
-    "executedAt": "2026-10-09T11:26:51.184Z",
+    "executedAt": "2026-10-10T06:56:37.779Z",
     "tcId": "TC-GENERIC",
     "title": "Custom Reports",
     "module": "BOU Reports",
     "portal": "Maker",
     "userName": "SHILPAMAKER",
-    "status": "timedOut",
+    "status": "failed",
     "knownDefect": false,
-    "durationMs": 30372,
+    "durationMs": 11972,
     "error": {
-      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
-      "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+      "message": "Error: page.waitForURL: Target page, context or browser has been closed\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================",
+      "stack": "Error: page.waitForURL: Target page, context or browser has been closed\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================\n    at setupAuth (D:\\BBPS_E2E_Automation\\Pages\\Hooks.js:164:16)\n    at D:\\BBPS_E2E_Automation\\tests\\BOU_Reports.spec.js:15:13"
     },
     "steps": [
       {
-        "title": "Executed automated workflow steps",
-        "durationMs": 30372,
+        "title": "Launch browser",
+        "durationMs": 3958,
         "error": null,
         "technicalProof": []
       },
       {
-        "title": "❌ FAILED: \u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
-        "durationMs": 0,
-        "error": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+        "title": "Create context",
+        "durationMs": 1589,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Create page",
+        "durationMs": 1684,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Navigate — bob-bank-uat.isampurna.com/",
+        "durationMs": 1596,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Evaluate",
+        "durationMs": 103,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Fill \"SHILPAMAKER\" — getByPlaceholder('Enter your Username')",
+        "durationMs": 1069,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Fill \"Test@2027\" — getByPlaceholder('Enter your Password')",
+        "durationMs": 71,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Click — locator('.PrivateSwitchBase-input')",
+        "durationMs": 186,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Click — getByRole('button', { name: 'Login' })",
+        "durationMs": 149,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Wait for selector — locator('//div[@role=\\'dialog\\']')",
+        "durationMs": 832,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Fill \"0\" — locator('//input[@autocomplete=\\'one-time-code\\']').first()",
+        "durationMs": 31,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Fill \"0\" — locator('//input[@autocomplete=\\'one-time-code\\']').nth(1)",
+        "durationMs": 47,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Fill \"0\" — locator('//input[@autocomplete=\\'one-time-code\\']').nth(2)",
+        "durationMs": 21,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Fill \"0\" — locator('//input[@autocomplete=\\'one-time-code\\']').nth(3)",
+        "durationMs": 35,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Fill \"0\" — locator('//input[@autocomplete=\\'one-time-code\\']').nth(4)",
+        "durationMs": 24,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Fill \"0\" — locator('//input[@autocomplete=\\'one-time-code\\']').nth(5)",
+        "durationMs": 31,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Click — getByRole('button', { name: 'Verify' })",
+        "durationMs": 71,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Wait for selector — locator('.zoom-animation')",
+        "durationMs": 833,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "❌ FAILED: Wait for navigation — Error: page.waitForURL: Target page, context or browser has been closed",
+        "durationMs": 3313,
+        "error": "Error: page.waitForURL: Target page, context or browser has been closed\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================",
+        "technicalProof": []
+      },
+      {
+        "title": "Close context",
+        "durationMs": 181,
+        "error": null,
         "technicalProof": []
       }
     ],
     "attachments": [
-      {
-        "name": "screenshot",
-        "contentType": "image/png",
-        "path": "D:\\BBPS_E2E_Automation\\reports\\nexus-report\\screenshots\\TC-GENERIC_7d603e_timedOut_1.png",
-        "relativePath": "screenshots/TC-GENERIC_7d603e_timedOut_1.png",
-        "base64": null
-      },
       {
         "name": "error-context",
         "contentType": "text/markdown",
@@ -518,8 +619,8 @@
         "base64": null
       }
     ],
-    "primaryScreenshot": "screenshots/TC-GENERIC_7d603e_timedOut_1.png",
-    "location": "BOU_Reports.spec.js:16"
+    "primaryScreenshot": null,
+    "location": "BOU_Reports.spec.js:18"
   },
   {
     "id": "f58d08b28dfcae8b40a9-5c4272139cdd64ca1bbf",
@@ -568,34 +669,77 @@
     "id": "758cfb3308aa3651c7cb-0dfc2163e90551c69765",
     "key": " › BOB BBPS › BOU_Reports.spec.js › BOU Reports - Maker › Periodic Reports",
     "file": "tests\\BOU_Reports.spec.js",
-    "executedAt": "2026-10-09T11:27:15.953Z",
+    "executedAt": "2026-10-10T06:44:49.138Z",
     "tcId": "TC-GENERIC",
     "title": "Periodic Reports",
     "module": "BOU Reports",
     "portal": "Maker",
     "userName": "SHILPAMAKER",
-    "status": "failed",
+    "status": "interrupted",
     "knownDefect": false,
-    "durationMs": 12296,
+    "durationMs": 16661,
     "error": {
-      "message": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Report Center' })\u001b[22m\n\u001b[2m    - locator resolved to <button tabindex=\"0\" type=\"button\" class=\"MuiButtonBase-root css-16gtsh6\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n\u001b[2m  - element was detached from the DOM, retrying\u001b[22m\n",
-      "stack": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Report Center' })\u001b[22m\n\u001b[2m    - locator resolved to <button tabindex=\"0\" type=\"button\" class=\"MuiButtonBase-root css-16gtsh6\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n\u001b[2m  - element was detached from the DOM, retrying\u001b[22m\n\n    at BOUReportsPage.openReportCenter (D:\\BBPS_E2E_Automation\\Pages\\BOUReportsPage.js:64:39)\n    at D:\\BBPS_E2E_Automation\\tests\\BOU_Reports.spec.js:30:30"
+      "message": "Error: locator.click: Test ended.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Report Center' })\u001b[22m\n\u001b[2m    - locator resolved to <button tabindex=\"0\" type=\"button\" class=\"MuiButtonBase-root css-16gtsh6\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n\u001b[2m  - element was detached from the DOM, retrying\u001b[22m\n",
+      "stack": "Error: locator.click: Test ended.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Report Center' })\u001b[22m\n\u001b[2m    - locator resolved to <button tabindex=\"0\" type=\"button\" class=\"MuiButtonBase-root css-16gtsh6\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n\u001b[2m  - element was detached from the DOM, retrying\u001b[22m\n\n    at BOUReportsPage.openReportCenter (D:\\BBPS_E2E_Automation\\Pages\\BOUReportsPage.js:66:39)\n    at D:\\BBPS_E2E_Automation\\tests\\BOU_Reports.spec.js:32:30"
     },
     "steps": [
       {
-        "title": "Executed automated workflow steps",
-        "durationMs": 12296,
+        "title": "Launch browser",
+        "durationMs": 3011,
         "error": null,
         "technicalProof": []
       },
       {
-        "title": "❌ FAILED: Error: locator.click: Target page, context or browser has been closed",
-        "durationMs": 0,
-        "error": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Report Center' })\u001b[22m\n\u001b[2m    - locator resolved to <button tabindex=\"0\" type=\"button\" class=\"MuiButtonBase-root css-16gtsh6\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n\u001b[2m  - element was detached from the DOM, retrying\u001b[22m\n",
+        "title": "Create context",
+        "durationMs": 1402,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Create page",
+        "durationMs": 1645,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Navigate — bob-bank-uat.isampurna.com/",
+        "durationMs": 1581,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Evaluate",
+        "durationMs": 27,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Navigate — bob-bank-uat.isampurna.com/admin/dashboard",
+        "durationMs": 169,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "❌ FAILED: Click — getByRole('button', { name: 'Report Center' }) — Error: locator.click: Test ended.",
+        "durationMs": 11788,
+        "error": "Error: locator.click: Test ended.\nCall log:\n  - waiting for getByRole('button', { name: 'Report Center' })\n    - locator resolved to <button tabindex=\"0\" type=\"button\" class=\"MuiButtonBase-root css-16gtsh6\">…</button>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\n    - retrying click action\n      - waiting 100ms\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\n  - retrying click action\n    - waiting 500ms\n  - element was detached from the DOM, retrying",
+        "technicalProof": []
+      },
+      {
+        "title": "Close context",
+        "durationMs": 19,
+        "error": null,
         "technicalProof": []
       }
     ],
     "attachments": [
+      {
+        "name": "screenshot",
+        "contentType": "image/png",
+        "path": "D:\\BBPS_E2E_Automation\\reports\\nexus-report\\screenshots\\TC-GENERIC_c8326a_interrupted_1.png",
+        "relativePath": "screenshots/TC-GENERIC_c8326a_interrupted_1.png",
+        "base64": null
+      },
       {
         "name": "error-context",
         "contentType": "text/markdown",
@@ -604,8 +748,8 @@
         "base64": null
       }
     ],
-    "primaryScreenshot": null,
-    "location": "BOU_Reports.spec.js:28"
+    "primaryScreenshot": "screenshots/TC-GENERIC_c8326a_interrupted_1.png",
+    "location": "BOU_Reports.spec.js:30"
   },
   {
     "id": "64159d6fba74027d80b3-f5ce1e54ebf6594ce702",
@@ -661,34 +805,137 @@
     "id": "758cfb3308aa3651c7cb-a474ef5ec02783551c4e",
     "key": " › BOB BBPS › BOU_Reports.spec.js › BOU Reports - Maker › Combination Search",
     "file": "tests\\BOU_Reports.spec.js",
-    "executedAt": "2026-10-09T11:27:51.951Z",
+    "executedAt": "2026-10-10T06:29:44.377Z",
     "tcId": "TC-GENERIC",
     "title": "Combination Search",
     "module": "BOU Reports",
     "portal": "Maker",
     "userName": "SHILPAMAKER",
-    "status": "failed",
+    "status": "timedOut",
     "knownDefect": false,
-    "durationMs": 26347,
+    "durationMs": 30255,
     "error": {
-      "message": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Report Center' })\u001b[22m\n\u001b[2m    - locator resolved to <button tabindex=\"0\" type=\"button\" class=\"MuiButtonBase-root css-16gtsh6\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    3 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\u001b[2m  - element was detached from the DOM, retrying\u001b[22m\n",
-      "stack": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Report Center' })\u001b[22m\n\u001b[2m    - locator resolved to <button tabindex=\"0\" type=\"button\" class=\"MuiButtonBase-root css-16gtsh6\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    3 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\u001b[2m  - element was detached from the DOM, retrying\u001b[22m\n\n    at BOUReportsPage.openReportCenter (D:\\BBPS_E2E_Automation\\Pages\\BOUReportsPage.js:64:39)\n    at D:\\BBPS_E2E_Automation\\tests\\BOU_Reports.spec.js:43:30"
+      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+      "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
     },
     "steps": [
       {
-        "title": "Executed automated workflow steps",
-        "durationMs": 26347,
+        "title": "Launch browser",
+        "durationMs": 2911,
         "error": null,
         "technicalProof": []
       },
       {
-        "title": "❌ FAILED: Error: locator.click: Target page, context or browser has been closed",
-        "durationMs": 0,
-        "error": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Report Center' })\u001b[22m\n\u001b[2m    - locator resolved to <button tabindex=\"0\" type=\"button\" class=\"MuiButtonBase-root css-16gtsh6\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    3 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div aria-hidden=\"true\" class=\"MuiBackdrop-root css-16g5q9w\">…</div> from <div class=\"css-1qdouia\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\u001b[2m  - element was detached from the DOM, retrying\u001b[22m\n",
+        "title": "Create context",
+        "durationMs": 1418,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Create page",
+        "durationMs": 1379,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Navigate — bob-bank-uat.isampurna.com/",
+        "durationMs": 1378,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Evaluate",
+        "durationMs": 22,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Navigate — bob-bank-uat.isampurna.com/admin/dashboard",
+        "durationMs": 252,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Click — getByRole('button', { name: 'Report Center' })",
+        "durationMs": 1422,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Click — getByText('BOU Report').first()",
+        "durationMs": 92,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Expect \"toBeVisible\" — getByText('BOU Report').first()",
+        "durationMs": 19,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Wait for selector — locator('.zoom-animation')",
+        "durationMs": 9,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Expect \"toBeVisible\" — getByRole('tab', { name: 'Combination Search' })",
+        "durationMs": 237,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Click — getByRole('tab', { name: 'Combination Search' })",
+        "durationMs": 231,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Fill \"09/10/2026\" — getByRole('textbox', { name: 'DD/MM/YYYY' }).first()",
+        "durationMs": 49,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Fill \"5646476576\" — getByPlaceholder('Enter Reference ID')",
+        "durationMs": 47,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Fill \"SATYA1234\" — getByRole('combobox', { name: 'Type Biller Username' })",
+        "durationMs": 47,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Fill \"SATYA1234\" — getByPlaceholder('Type Biller Username')",
+        "durationMs": 26,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "❌ FAILED: Click — getByRole('option').first() — Error: locator.click: Test timeout of 30000ms exceeded.",
+        "durationMs": 23560,
+        "error": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n  - waiting for getByRole('option').first()",
+        "technicalProof": []
+      },
+      {
+        "title": "Close context",
+        "durationMs": 25,
+        "error": null,
         "technicalProof": []
       }
     ],
     "attachments": [
+      {
+        "name": "screenshot",
+        "contentType": "image/png",
+        "path": "D:\\BBPS_E2E_Automation\\reports\\nexus-report\\screenshots\\TC-GENERIC_673fa8_timedOut_1.png",
+        "relativePath": "screenshots/TC-GENERIC_673fa8_timedOut_1.png",
+        "base64": null
+      },
       {
         "name": "error-context",
         "contentType": "text/markdown",
@@ -697,8 +944,8 @@
         "base64": null
       }
     ],
-    "primaryScreenshot": null,
-    "location": "BOU_Reports.spec.js:41"
+    "primaryScreenshot": "screenshots/TC-GENERIC_673fa8_timedOut_1.png",
+    "location": "BOU_Reports.spec.js:43"
   },
   {
     "id": "64159d6fba74027d80b3-99b0f672ada7c662ee8f",
@@ -797,7 +1044,7 @@
     "id": "758cfb3308aa3651c7cb-1c4e6f75ff6b2eef21a8",
     "key": " › BOB BBPS › BOU_Reports.spec.js › BOU Reports - Checker › Custom Reports",
     "file": "tests\\BOU_Reports.spec.js",
-    "executedAt": "2026-10-09T11:28:34.546Z",
+    "executedAt": "2026-10-10T06:57:09.733Z",
     "tcId": "TC-GENERIC",
     "title": "Custom Reports",
     "module": "BOU Reports",
@@ -805,22 +1052,130 @@
     "userName": "SANGRAMCHECKERUAT",
     "status": "failed",
     "knownDefect": false,
-    "durationMs": 23707,
+    "durationMs": 22760,
     "error": {
       "message": "TimeoutError: page.waitForURL: Timeout 15000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================",
-      "stack": "TimeoutError: page.waitForURL: Timeout 15000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================\n    at setupAuth (D:\\BBPS_E2E_Automation\\Pages\\Hooks.js:142:16)\n    at D:\\BBPS_E2E_Automation\\tests\\BOU_Reports.spec.js:13:13"
+      "stack": "TimeoutError: page.waitForURL: Timeout 15000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================\n    at setupAuth (D:\\BBPS_E2E_Automation\\Pages\\Hooks.js:164:16)\n    at D:\\BBPS_E2E_Automation\\tests\\BOU_Reports.spec.js:15:13"
     },
     "steps": [
       {
-        "title": "Executed automated workflow steps",
-        "durationMs": 23707,
+        "title": "Launch browser",
+        "durationMs": 4533,
         "error": null,
         "technicalProof": []
       },
       {
-        "title": "❌ FAILED: TimeoutError: page.waitForURL: Timeout 15000ms exceeded.",
-        "durationMs": 0,
+        "title": "Create context",
+        "durationMs": 1625,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Create page",
+        "durationMs": 1485,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Navigate — bob-bank-uat.isampurna.com/",
+        "durationMs": 1066,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Evaluate",
+        "durationMs": 60,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Fill \"SANGRAMCHECKERUAT\" — getByPlaceholder('Enter your Username')",
+        "durationMs": 564,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Fill \"Test@2028\" — getByPlaceholder('Enter your Password')",
+        "durationMs": 103,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Click — locator('.PrivateSwitchBase-input')",
+        "durationMs": 190,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Click — getByRole('button', { name: 'Login' })",
+        "durationMs": 193,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Wait for selector — locator('//div[@role=\\'dialog\\']')",
+        "durationMs": 482,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Fill \"0\" — locator('//input[@autocomplete=\\'one-time-code\\']').first()",
+        "durationMs": 31,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Fill \"0\" — locator('//input[@autocomplete=\\'one-time-code\\']').nth(1)",
+        "durationMs": 84,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Fill \"0\" — locator('//input[@autocomplete=\\'one-time-code\\']').nth(2)",
+        "durationMs": 78,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Fill \"0\" — locator('//input[@autocomplete=\\'one-time-code\\']').nth(3)",
+        "durationMs": 59,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Fill \"0\" — locator('//input[@autocomplete=\\'one-time-code\\']').nth(4)",
+        "durationMs": 87,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Fill \"0\" — locator('//input[@autocomplete=\\'one-time-code\\']').nth(5)",
+        "durationMs": 32,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Click — getByRole('button', { name: 'Verify' })",
+        "durationMs": 186,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Wait for selector — locator('.zoom-animation')",
+        "durationMs": 964,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "❌ FAILED: Wait for navigation — TimeoutError: page.waitForURL: Timeout 15000ms exceeded.",
+        "durationMs": 15013,
         "error": "TimeoutError: page.waitForURL: Timeout 15000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================",
+        "technicalProof": []
+      },
+      {
+        "title": "Close context",
+        "durationMs": 96,
+        "error": null,
         "technicalProof": []
       }
     ],
@@ -841,7 +1196,7 @@
       }
     ],
     "primaryScreenshot": "screenshots/TC-GENERIC_7d603e_failed_1.png",
-    "location": "BOU_Reports.spec.js:16"
+    "location": "BOU_Reports.spec.js:18"
   },
   {
     "id": "f58d08b28dfcae8b40a9-e179907e90da35da40f7",
@@ -947,30 +1302,132 @@
     "id": "758cfb3308aa3651c7cb-9a0fb34e7674a38fc9c0",
     "key": " › BOB BBPS › BOU_Reports.spec.js › BOU Reports - Checker › Periodic Reports",
     "file": "tests\\BOU_Reports.spec.js",
-    "executedAt": "2026-10-09T11:29:16.438Z",
+    "executedAt": "2026-10-09T13:18:27.345Z",
     "tcId": "TC-GENERIC",
     "title": "Periodic Reports",
     "module": "BOU Reports",
     "portal": "Checker",
     "userName": "SANGRAMCHECKERUAT",
-    "status": "failed",
+    "status": "interrupted",
     "knownDefect": false,
-    "durationMs": 22147,
+    "durationMs": 24866,
     "error": {
-      "message": "TimeoutError: page.waitForURL: Timeout 15000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================",
-      "stack": "TimeoutError: page.waitForURL: Timeout 15000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================\n    at setupAuth (D:\\BBPS_E2E_Automation\\Pages\\Hooks.js:142:16)\n    at D:\\BBPS_E2E_Automation\\tests\\BOU_Reports.spec.js:13:13"
+      "message": "Error: locator.click: Test ended.\nCall log:\n\u001b[2m  - waiting for getByRole('option', { name: 'SATYA RANJAN SATYA1234 (9861342205)' })\u001b[22m\n",
+      "stack": "Error: locator.click: Test ended.\nCall log:\n\u001b[2m  - waiting for getByRole('option', { name: 'SATYA RANJAN SATYA1234 (9861342205)' })\u001b[22m\n\n    at BOUReportsPage.selectBiller (D:\\BBPS_E2E_Automation\\Pages\\BOUReportsPage.js:116:33)\n    at D:\\BBPS_E2E_Automation\\tests\\BOU_Reports.spec.js:36:30"
     },
     "steps": [
       {
-        "title": "Executed automated workflow steps",
-        "durationMs": 22147,
+        "title": "Launch browser",
+        "durationMs": 3113,
         "error": null,
         "technicalProof": []
       },
       {
-        "title": "❌ FAILED: TimeoutError: page.waitForURL: Timeout 15000ms exceeded.",
-        "durationMs": 0,
-        "error": "TimeoutError: page.waitForURL: Timeout 15000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================",
+        "title": "Create context",
+        "durationMs": 1327,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Create page",
+        "durationMs": 2343,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Navigate — bob-bank-uat.isampurna.com/admin/login",
+        "durationMs": 925,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Evaluate",
+        "durationMs": 57,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Navigate — bob-bank-uat.isampurna.com/admin/dashboard",
+        "durationMs": 277,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Click — getByRole('button', { name: 'Report Center' })",
+        "durationMs": 1527,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Click — getByText('BOU Report').first()",
+        "durationMs": 119,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Expect \"toBeVisible\" — getByText('BOU Report').first()",
+        "durationMs": 23,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Wait for selector — locator('.zoom-animation')",
+        "durationMs": 5,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Expect \"toBeVisible\" — getByRole('tab', { name: 'Periodic' })",
+        "durationMs": 273,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Click — getByRole('tab', { name: 'Periodic' })",
+        "durationMs": 134,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Click — getByRole('combobox', { name: 'Select Periodic' })",
+        "durationMs": 65,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Click — getByRole('option', { name: 'Last 7 days' })",
+        "durationMs": 387,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Click — getByRole('combobox', { name: 'Select Type' })",
+        "durationMs": 362,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Click — getByRole('option', { name: 'BOU Transaction Report' })",
+        "durationMs": 424,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "Fill \"SATYA1234\" — getByRole('combobox', { name: 'Type Biller Username' })",
+        "durationMs": 97,
+        "error": null,
+        "technicalProof": []
+      },
+      {
+        "title": "❌ FAILED: Click — getByRole('option', { name: 'SATYA RANJAN SATYA1234 (9861342205)' }) — Error: locator.click: Test ended.",
+        "durationMs": 16436,
+        "error": "Error: locator.click: Test ended.\nCall log:\n  - waiting for getByRole('option', { name: 'SATYA RANJAN SATYA1234 (9861342205)' })",
+        "technicalProof": []
+      },
+      {
+        "title": "Close context",
+        "durationMs": 15,
+        "error": null,
         "technicalProof": []
       }
     ],
@@ -978,8 +1435,8 @@
       {
         "name": "screenshot",
         "contentType": "image/png",
-        "path": "D:\\BBPS_E2E_Automation\\reports\\nexus-report\\screenshots\\TC-GENERIC_c8326a_failed_1.png",
-        "relativePath": "screenshots/TC-GENERIC_c8326a_failed_1.png",
+        "path": "D:\\BBPS_E2E_Automation\\reports\\nexus-report\\screenshots\\TC-GENERIC_c8326a_interrupted_1.png",
+        "relativePath": "screenshots/TC-GENERIC_c8326a_interrupted_1.png",
         "base64": null
       },
       {
@@ -990,7 +1447,7 @@
         "base64": null
       }
     ],
-    "primaryScreenshot": "screenshots/TC-GENERIC_c8326a_failed_1.png",
+    "primaryScreenshot": "screenshots/TC-GENERIC_c8326a_interrupted_1.png",
     "location": "BOU_Reports.spec.js:28"
   },
   {

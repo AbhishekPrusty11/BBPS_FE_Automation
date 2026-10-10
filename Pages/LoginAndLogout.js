@@ -1,4 +1,6 @@
 const { expect } = require('@playwright/test');
+const envConfig = require('../Config/envConfig');
+
 
 class LoginAndLogout {
 
@@ -37,12 +39,14 @@ class LoginAndLogout {
 
     async goTo() {
 
-        // await this.page.goto('https://bob-bbps-admin-stage.iserveu.online/client/login',
-        await this.page.goto('https://bob-bank-uat.isampurna.com/admin/login',
-            {
-                waitUntil: 'domcontentloaded'
-            }
-        );
+        const environment = process.env.TEST_ENV || 'UAT';
+        const selectedConfig = envConfig[environment];
+
+        if (!selectedConfig?.baseUrl) {
+            throw new Error(`Base URL not configured for ${environment}`);
+        }
+
+        await this.page.goto(selectedConfig.baseUrl);
     }
 
 

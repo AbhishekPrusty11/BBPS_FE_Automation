@@ -21,36 +21,39 @@ function isTokenExpired(token) {
     }
 }
 
-// ==================================================
-// ROLE → DASHBOARD URL
-// ==================================================
 
-const dashboardUrls = {
-
-    //Staging URLs
-    // Maker: 'https://bob-bbps-admin-stage.iserveu.online/admin/dashboard',
-    // Biller: 'https://bob-bbps-admin-stage.iserveu.online/biller/dashboard',
-    // Checker: 'https://bob-bbps-admin-stage.iserveu.online/admin/dashboard',
-
-    //UAT URLs
-    Maker: 'https://bob-bank-uat.isampurna.com/admin/dashboard',
-    Biller: 'https://bob-bank-uat.isampurna.com/biller/dashboard',
-    Checker: 'https://bob-bank-uat.isampurna.com/admin/dashboard'
-};
-
-// ==================================================
-// AUTHENTICATION
-// ==================================================
 
 
 async function setupAuth(page, role = 'Maker') {
 
-    const dashboardUrl = dashboardUrls[role];
-    const user = envConfig.UAT.credentials[role];
+    const environment = process.env.TEST_ENV || 'UAT';
+    const selectedConfig = envConfig[environment];
 
-    if (!dashboardUrl) {
+    if (!selectedConfig) {
+        throw new Error(`Invalid environment: ${environment}`);
+    }
+
+    const dashboardPaths = {
+        Maker: '/admin/dashboard',
+        Biller: '/biller/dashboard',
+        Checker: '/admin/dashboard'
+    };
+
+    const dashboardUrl =
+        `${selectedConfig.baseUrl.replace(/\/+$/, '')}${dashboardPaths[role]}`;
+
+    const user = selectedConfig.credentials[role];
+
+    if (!dashboardPaths[role]) {
         throw new Error(`Dashboard URL not configured for role: ${role}`);
     }
+
+    // const dashboardUrl = dashboardUrls[role];
+    // const user = envConfig.UAT.credentials[role];
+
+    // if (!dashboardUrl) {
+    //     throw new Error(`Dashboard URL not configured for role: ${role}`);
+    // }
 
     if (!user) {
         if (!user || !user.Username || !user.Password || !user.Otp) {

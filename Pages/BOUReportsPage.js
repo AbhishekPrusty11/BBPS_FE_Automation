@@ -61,8 +61,39 @@ class BOUReportsPage {
     }
 
     async openReportCenter() {
-        await this.reportCenterButton.click();
+        // await this.reportCenterButton.click();
+    const reportCenterButton = this.page.getByRole('button', {
+        name: 'Report Center',
+        exact: true
+    });
+
+    const backdrop = this.page.locator('.MuiBackdrop-root:visible');
+
+    console.log('URL before clicking:', this.page.url());
+    console.log('Visible backdrop count:', await backdrop.count());
+
+    if (await backdrop.count()) {
+        console.log(
+            'Backdrop details:',
+            await backdrop.evaluateAll(elements =>
+                elements.map(element => ({
+                    className: element.className,
+                    ariaHidden: element.getAttribute('aria-hidden'),
+                    zIndex: getComputedStyle(element).zIndex
+                }))
+            )
+        );
     }
+
+    await reportCenterButton.waitFor({
+        state: 'visible',
+        timeout: 10000
+    });
+
+    await reportCenterButton.click({ timeout: 10000 });
+}
+
+    
 
     async openBOUReport() {
         await this.bouReport.click();

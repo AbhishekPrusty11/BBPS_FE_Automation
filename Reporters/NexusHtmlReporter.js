@@ -25,8 +25,7 @@ export default class NexusHtmlReporter {
     this.historyFile = path.join(this.outputDir, 'results-history.json');
 
     // Results from this run only, keyed per test (a retried test keeps its
-    // final attempt). They are merged over the history in onEnd so the report
-    // always covers every test, not just the ones run in this cycle.
+    // final attempt). The report reflects this run; history is retained separately.
     this.currentRun = new Map();
 
     this.suiteResults = {
@@ -179,7 +178,7 @@ export default class NexusHtmlReporter {
     this.dropSupersededEntries(merged);
     this.saveHistory(merged);
 
-    const tests = [...merged.values()].map((test, index) => ({
+    const tests = [...this.currentRun.values()].map((test, index) => ({
       ...test,
       tcId: `TC-${String(index + 1).padStart(3, '0')}`,
     }));

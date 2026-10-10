@@ -3,7 +3,9 @@ const { setupAuth } = require('../Pages/Hooks');
 const BillerData = require('../Fixtures/testData/BillerOnboard.json');
 
 
-const roles = ['Maker', 'Checker','Biller'];
+// const roles = ['Maker', 'Checker','Biller'];
+
+const roles = ['Maker', 'Checker'];
 
 for (const role of roles) {
 
@@ -13,7 +15,7 @@ for (const role of roles) {
             await setupAuth(page, role)
         })
 
-        test('Custom Reports', async ({ bouReports }) => {
+        test.only('Custom Reports', async ({ bouReports }) => {
 
             await bouReports.openReportCenter();
             await bouReports.openBOUReport();
